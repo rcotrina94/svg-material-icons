@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-ic_3d_rotation_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_accessibility_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_account_balance_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_account_balance_wallet_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_account_box_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_account_circle_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_add_shopping_cart_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_alarm_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_alarm_add_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_alarm_off_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_alarm_on_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_android_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_announcement_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_aspect_ratio_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assessment_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_ind_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_late_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_return_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_returned_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_assignment_turned_in_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_autorenew_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_backup_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_book_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_bookmark_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_bookmark_border_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_bug_report_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_build_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_cached_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_card_giftcard_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_card_membership_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_card_travel_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_change_history_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_check_circle_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_chrome_reader_mode_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_class_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_code_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_credit_card_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_dashboard_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_delete_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_description_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_dns_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_done_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_done_all_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_event_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_event_seat_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_exit_to_app_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_explore_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_extension_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_face_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_favorite_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_favorite_border_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_feedback_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_find_in_page_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_find_replace_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_flight_land_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_flight_takeoff_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_flip_to_back_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_flip_to_front_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_get_app_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_grade_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_group_work_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_help_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_highlight_off_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_history_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_home_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_hourglass_empty_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_hourglass_full_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_http_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_https_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_info_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_info_outline_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_input_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_invert_colors_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_label_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_label_outline_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_language_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_launch_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_list_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_lock_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_lock_open_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_lock_outline_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_loyalty_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_markunread_mailbox_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_note_add_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_open_in_browser_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_open_in_new_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_open_with_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_pageview_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_payment_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_camera_mic_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_contact_calendar_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_data_setting_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_device_information_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_identity_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_media_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_phone_msg_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_perm_scan_wifi_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_picture_in_picture_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_play_for_work_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_polymer_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_power_settings_new_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_print_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_query_builder_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_question_answer_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_receipt_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_redeem_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_report_problem_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_restore_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_room_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_schedule_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_search_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_applications_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_backup_restore_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_bluetooth_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_brightness_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_cell_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_ethernet_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_input_antenna_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_input_component_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_input_composite_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_input_hdmi_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_input_svideo_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_overscan_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_phone_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_power_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_remote_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_settings_voice_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_shop_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_shop_two_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_shopping_basket_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_shopping_cart_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_speaker_notes_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_spellcheck_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_stars_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_store_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_subject_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_supervisor_account_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_swap_horiz_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_swap_vert_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_swap_vertical_circle_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_system_update_alt_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_tab_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_tab_unselected_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_theaters_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_thumb_down_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_thumb_up_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_thumbs_up_down_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_toc_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_today_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_toll_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_track_changes_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_translate_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_trending_down_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_trending_flat_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_trending_up_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_turned_in_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_turned_in_not_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_verified_user_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_agenda_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_array_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_carousel_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_column_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_day_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_headline_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_list_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_module_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_quilt_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_stream_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_view_week_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_visibility_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_visibility_off_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_work_48px-dims { width: 48px; height: 48px; }
+	.svg-ic_youtube_searched_for_48px-dims { width: 48px; height: 48px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+			
+<!--
+	
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.  
+
+-->
+
+			<ul>
+				
+				<li title="ic_3d_rotation_48px">
+					<div class="icon-box">
+						
+						<!-- ic_3d_rotation_48px -->
+						<img src="action.svg#ic_3d_rotation_48px" class="svg-ic_3d_rotation_48px-dims" alt="ic_3d_rotation_48px"/>
+						
+					</div>
+					<h2>ic_3d_rotation_48px</h2>
+				</li>
+				<li title="ic_accessibility_48px">
+					<div class="icon-box">
+						
+						<!-- ic_accessibility_48px -->
+						<img src="action.svg#ic_accessibility_48px" class="svg-ic_accessibility_48px-dims" alt="ic_accessibility_48px"/>
+						
+					</div>
+					<h2>ic_accessibility_48px</h2>
+				</li>
+				<li title="ic_account_balance_48px">
+					<div class="icon-box">
+						
+						<!-- ic_account_balance_48px -->
+						<img src="action.svg#ic_account_balance_48px" class="svg-ic_account_balance_48px-dims" alt="ic_account_balance_48px"/>
+						
+					</div>
+					<h2>ic_account_balance_48px</h2>
+				</li>
+				<li title="ic_account_balance_wallet_48px">
+					<div class="icon-box">
+						
+						<!-- ic_account_balance_wallet_48px -->
+						<img src="action.svg#ic_account_balance_wallet_48px" class="svg-ic_account_balance_wallet_48px-dims" alt="ic_account_balance_wallet_48px"/>
+						
+					</div>
+					<h2>ic_account_balance_wallet_48px</h2>
+				</li>
+				<li title="ic_account_box_48px">
+					<div class="icon-box">
+						
+						<!-- ic_account_box_48px -->
+						<img src="action.svg#ic_account_box_48px" class="svg-ic_account_box_48px-dims" alt="ic_account_box_48px"/>
+						
+					</div>
+					<h2>ic_account_box_48px</h2>
+				</li>
+				<li title="ic_account_circle_48px">
+					<div class="icon-box">
+						
+						<!-- ic_account_circle_48px -->
+						<img src="action.svg#ic_account_circle_48px" class="svg-ic_account_circle_48px-dims" alt="ic_account_circle_48px"/>
+						
+					</div>
+					<h2>ic_account_circle_48px</h2>
+				</li>
+				<li title="ic_add_shopping_cart_48px">
+					<div class="icon-box">
+						
+						<!-- ic_add_shopping_cart_48px -->
+						<img src="action.svg#ic_add_shopping_cart_48px" class="svg-ic_add_shopping_cart_48px-dims" alt="ic_add_shopping_cart_48px"/>
+						
+					</div>
+					<h2>ic_add_shopping_cart_48px</h2>
+				</li>
+				<li title="ic_alarm_48px">
+					<div class="icon-box">
+						
+						<!-- ic_alarm_48px -->
+						<img src="action.svg#ic_alarm_48px" class="svg-ic_alarm_48px-dims" alt="ic_alarm_48px"/>
+						
+					</div>
+					<h2>ic_alarm_48px</h2>
+				</li>
+				<li title="ic_alarm_add_48px">
+					<div class="icon-box">
+						
+						<!-- ic_alarm_add_48px -->
+						<img src="action.svg#ic_alarm_add_48px" class="svg-ic_alarm_add_48px-dims" alt="ic_alarm_add_48px"/>
+						
+					</div>
+					<h2>ic_alarm_add_48px</h2>
+				</li>
+				<li title="ic_alarm_off_48px">
+					<div class="icon-box">
+						
+						<!-- ic_alarm_off_48px -->
+						<img src="action.svg#ic_alarm_off_48px" class="svg-ic_alarm_off_48px-dims" alt="ic_alarm_off_48px"/>
+						
+					</div>
+					<h2>ic_alarm_off_48px</h2>
+				</li>
+				<li title="ic_alarm_on_48px">
+					<div class="icon-box">
+						
+						<!-- ic_alarm_on_48px -->
+						<img src="action.svg#ic_alarm_on_48px" class="svg-ic_alarm_on_48px-dims" alt="ic_alarm_on_48px"/>
+						
+					</div>
+					<h2>ic_alarm_on_48px</h2>
+				</li>
+				<li title="ic_android_48px">
+					<div class="icon-box">
+						
+						<!-- ic_android_48px -->
+						<img src="action.svg#ic_android_48px" class="svg-ic_android_48px-dims" alt="ic_android_48px"/>
+						
+					</div>
+					<h2>ic_android_48px</h2>
+				</li>
+				<li title="ic_announcement_48px">
+					<div class="icon-box">
+						
+						<!-- ic_announcement_48px -->
+						<img src="action.svg#ic_announcement_48px" class="svg-ic_announcement_48px-dims" alt="ic_announcement_48px"/>
+						
+					</div>
+					<h2>ic_announcement_48px</h2>
+				</li>
+				<li title="ic_aspect_ratio_48px">
+					<div class="icon-box">
+						
+						<!-- ic_aspect_ratio_48px -->
+						<img src="action.svg#ic_aspect_ratio_48px" class="svg-ic_aspect_ratio_48px-dims" alt="ic_aspect_ratio_48px"/>
+						
+					</div>
+					<h2>ic_aspect_ratio_48px</h2>
+				</li>
+				<li title="ic_assessment_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assessment_48px -->
+						<img src="action.svg#ic_assessment_48px" class="svg-ic_assessment_48px-dims" alt="ic_assessment_48px"/>
+						
+					</div>
+					<h2>ic_assessment_48px</h2>
+				</li>
+				<li title="ic_assignment_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_48px -->
+						<img src="action.svg#ic_assignment_48px" class="svg-ic_assignment_48px-dims" alt="ic_assignment_48px"/>
+						
+					</div>
+					<h2>ic_assignment_48px</h2>
+				</li>
+				<li title="ic_assignment_ind_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_ind_48px -->
+						<img src="action.svg#ic_assignment_ind_48px" class="svg-ic_assignment_ind_48px-dims" alt="ic_assignment_ind_48px"/>
+						
+					</div>
+					<h2>ic_assignment_ind_48px</h2>
+				</li>
+				<li title="ic_assignment_late_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_late_48px -->
+						<img src="action.svg#ic_assignment_late_48px" class="svg-ic_assignment_late_48px-dims" alt="ic_assignment_late_48px"/>
+						
+					</div>
+					<h2>ic_assignment_late_48px</h2>
+				</li>
+				<li title="ic_assignment_return_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_return_48px -->
+						<img src="action.svg#ic_assignment_return_48px" class="svg-ic_assignment_return_48px-dims" alt="ic_assignment_return_48px"/>
+						
+					</div>
+					<h2>ic_assignment_return_48px</h2>
+				</li>
+				<li title="ic_assignment_returned_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_returned_48px -->
+						<img src="action.svg#ic_assignment_returned_48px" class="svg-ic_assignment_returned_48px-dims" alt="ic_assignment_returned_48px"/>
+						
+					</div>
+					<h2>ic_assignment_returned_48px</h2>
+				</li>
+				<li title="ic_assignment_turned_in_48px">
+					<div class="icon-box">
+						
+						<!-- ic_assignment_turned_in_48px -->
+						<img src="action.svg#ic_assignment_turned_in_48px" class="svg-ic_assignment_turned_in_48px-dims" alt="ic_assignment_turned_in_48px"/>
+						
+					</div>
+					<h2>ic_assignment_turned_in_48px</h2>
+				</li>
+				<li title="ic_autorenew_48px">
+					<div class="icon-box">
+						
+						<!-- ic_autorenew_48px -->
+						<img src="action.svg#ic_autorenew_48px" class="svg-ic_autorenew_48px-dims" alt="ic_autorenew_48px"/>
+						
+					</div>
+					<h2>ic_autorenew_48px</h2>
+				</li>
+				<li title="ic_backup_48px">
+					<div class="icon-box">
+						
+						<!-- ic_backup_48px -->
+						<img src="action.svg#ic_backup_48px" class="svg-ic_backup_48px-dims" alt="ic_backup_48px"/>
+						
+					</div>
+					<h2>ic_backup_48px</h2>
+				</li>
+				<li title="ic_book_48px">
+					<div class="icon-box">
+						
+						<!-- ic_book_48px -->
+						<img src="action.svg#ic_book_48px" class="svg-ic_book_48px-dims" alt="ic_book_48px"/>
+						
+					</div>
+					<h2>ic_book_48px</h2>
+				</li>
+				<li title="ic_bookmark_48px">
+					<div class="icon-box">
+						
+						<!-- ic_bookmark_48px -->
+						<img src="action.svg#ic_bookmark_48px" class="svg-ic_bookmark_48px-dims" alt="ic_bookmark_48px"/>
+						
+					</div>
+					<h2>ic_bookmark_48px</h2>
+				</li>
+				<li title="ic_bookmark_border_48px">
+					<div class="icon-box">
+						
+						<!-- ic_bookmark_border_48px -->
+						<img src="action.svg#ic_bookmark_border_48px" class="svg-ic_bookmark_border_48px-dims" alt="ic_bookmark_border_48px"/>
+						
+					</div>
+					<h2>ic_bookmark_border_48px</h2>
+				</li>
+				<li title="ic_bug_report_48px">
+					<div class="icon-box">
+						
+						<!-- ic_bug_report_48px -->
+						<img src="action.svg#ic_bug_report_48px" class="svg-ic_bug_report_48px-dims" alt="ic_bug_report_48px"/>
+						
+					</div>
+					<h2>ic_bug_report_48px</h2>
+				</li>
+				<li title="ic_build_48px">
+					<div class="icon-box">
+						
+						<!-- ic_build_48px -->
+						<img src="action.svg#ic_build_48px" class="svg-ic_build_48px-dims" alt="ic_build_48px"/>
+						
+					</div>
+					<h2>ic_build_48px</h2>
+				</li>
+				<li title="ic_cached_48px">
+					<div class="icon-box">
+						
+						<!-- ic_cached_48px -->
+						<img src="action.svg#ic_cached_48px" class="svg-ic_cached_48px-dims" alt="ic_cached_48px"/>
+						
+					</div>
+					<h2>ic_cached_48px</h2>
+				</li>
+				<li title="ic_card_giftcard_48px">
+					<div class="icon-box">
+						
+						<!-- ic_card_giftcard_48px -->
+						<img src="action.svg#ic_card_giftcard_48px" class="svg-ic_card_giftcard_48px-dims" alt="ic_card_giftcard_48px"/>
+						
+					</div>
+					<h2>ic_card_giftcard_48px</h2>
+				</li>
+				<li title="ic_card_membership_48px">
+					<div class="icon-box">
+						
+						<!-- ic_card_membership_48px -->
+						<img src="action.svg#ic_card_membership_48px" class="svg-ic_card_membership_48px-dims" alt="ic_card_membership_48px"/>
+						
+					</div>
+					<h2>ic_card_membership_48px</h2>
+				</li>
+				<li title="ic_card_travel_48px">
+					<div class="icon-box">
+						
+						<!-- ic_card_travel_48px -->
+						<img src="action.svg#ic_card_travel_48px" class="svg-ic_card_travel_48px-dims" alt="ic_card_travel_48px"/>
+						
+					</div>
+					<h2>ic_card_travel_48px</h2>
+				</li>
+				<li title="ic_change_history_48px">
+					<div class="icon-box">
+						
+						<!-- ic_change_history_48px -->
+						<img src="action.svg#ic_change_history_48px" class="svg-ic_change_history_48px-dims" alt="ic_change_history_48px"/>
+						
+					</div>
+					<h2>ic_change_history_48px</h2>
+				</li>
+				<li title="ic_check_circle_48px">
+					<div class="icon-box">
+						
+						<!-- ic_check_circle_48px -->
+						<img src="action.svg#ic_check_circle_48px" class="svg-ic_check_circle_48px-dims" alt="ic_check_circle_48px"/>
+						
+					</div>
+					<h2>ic_check_circle_48px</h2>
+				</li>
+				<li title="ic_chrome_reader_mode_48px">
+					<div class="icon-box">
+						
+						<!-- ic_chrome_reader_mode_48px -->
+						<img src="action.svg#ic_chrome_reader_mode_48px" class="svg-ic_chrome_reader_mode_48px-dims" alt="ic_chrome_reader_mode_48px"/>
+						
+					</div>
+					<h2>ic_chrome_reader_mode_48px</h2>
+				</li>
+				<li title="ic_class_48px">
+					<div class="icon-box">
+						
+						<!-- ic_class_48px -->
+						<img src="action.svg#ic_class_48px" class="svg-ic_class_48px-dims" alt="ic_class_48px"/>
+						
+					</div>
+					<h2>ic_class_48px</h2>
+				</li>
+				<li title="ic_code_48px">
+					<div class="icon-box">
+						
+						<!-- ic_code_48px -->
+						<img src="action.svg#ic_code_48px" class="svg-ic_code_48px-dims" alt="ic_code_48px"/>
+						
+					</div>
+					<h2>ic_code_48px</h2>
+				</li>
+				<li title="ic_credit_card_48px">
+					<div class="icon-box">
+						
+						<!-- ic_credit_card_48px -->
+						<img src="action.svg#ic_credit_card_48px" class="svg-ic_credit_card_48px-dims" alt="ic_credit_card_48px"/>
+						
+					</div>
+					<h2>ic_credit_card_48px</h2>
+				</li>
+				<li title="ic_dashboard_48px">
+					<div class="icon-box">
+						
+						<!-- ic_dashboard_48px -->
+						<img src="action.svg#ic_dashboard_48px" class="svg-ic_dashboard_48px-dims" alt="ic_dashboard_48px"/>
+						
+					</div>
+					<h2>ic_dashboard_48px</h2>
+				</li>
+				<li title="ic_delete_48px">
+					<div class="icon-box">
+						
+						<!-- ic_delete_48px -->
+						<img src="action.svg#ic_delete_48px" class="svg-ic_delete_48px-dims" alt="ic_delete_48px"/>
+						
+					</div>
+					<h2>ic_delete_48px</h2>
+				</li>
+				<li title="ic_description_48px">
+					<div class="icon-box">
+						
+						<!-- ic_description_48px -->
+						<img src="action.svg#ic_description_48px" class="svg-ic_description_48px-dims" alt="ic_description_48px"/>
+						
+					</div>
+					<h2>ic_description_48px</h2>
+				</li>
+				<li title="ic_dns_48px">
+					<div class="icon-box">
+						
+						<!-- ic_dns_48px -->
+						<img src="action.svg#ic_dns_48px" class="svg-ic_dns_48px-dims" alt="ic_dns_48px"/>
+						
+					</div>
+					<h2>ic_dns_48px</h2>
+				</li>
+				<li title="ic_done_48px">
+					<div class="icon-box">
+						
+						<!-- ic_done_48px -->
+						<img src="action.svg#ic_done_48px" class="svg-ic_done_48px-dims" alt="ic_done_48px"/>
+						
+					</div>
+					<h2>ic_done_48px</h2>
+				</li>
+				<li title="ic_done_all_48px">
+					<div class="icon-box">
+						
+						<!-- ic_done_all_48px -->
+						<img src="action.svg#ic_done_all_48px" class="svg-ic_done_all_48px-dims" alt="ic_done_all_48px"/>
+						
+					</div>
+					<h2>ic_done_all_48px</h2>
+				</li>
+				<li title="ic_event_48px">
+					<div class="icon-box">
+						
+						<!-- ic_event_48px -->
+						<img src="action.svg#ic_event_48px" class="svg-ic_event_48px-dims" alt="ic_event_48px"/>
+						
+					</div>
+					<h2>ic_event_48px</h2>
+				</li>
+				<li title="ic_event_seat_48px">
+					<div class="icon-box">
+						
+						<!-- ic_event_seat_48px -->
+						<img src="action.svg#ic_event_seat_48px" class="svg-ic_event_seat_48px-dims" alt="ic_event_seat_48px"/>
+						
+					</div>
+					<h2>ic_event_seat_48px</h2>
+				</li>
+				<li title="ic_exit_to_app_48px">
+					<div class="icon-box">
+						
+						<!-- ic_exit_to_app_48px -->
+						<img src="action.svg#ic_exit_to_app_48px" class="svg-ic_exit_to_app_48px-dims" alt="ic_exit_to_app_48px"/>
+						
+					</div>
+					<h2>ic_exit_to_app_48px</h2>
+				</li>
+				<li title="ic_explore_48px">
+					<div class="icon-box">
+						
+						<!-- ic_explore_48px -->
+						<img src="action.svg#ic_explore_48px" class="svg-ic_explore_48px-dims" alt="ic_explore_48px"/>
+						
+					</div>
+					<h2>ic_explore_48px</h2>
+				</li>
+				<li title="ic_extension_48px">
+					<div class="icon-box">
+						
+						<!-- ic_extension_48px -->
+						<img src="action.svg#ic_extension_48px" class="svg-ic_extension_48px-dims" alt="ic_extension_48px"/>
+						
+					</div>
+					<h2>ic_extension_48px</h2>
+				</li>
+				<li title="ic_face_48px">
+					<div class="icon-box">
+						
+						<!-- ic_face_48px -->
+						<img src="action.svg#ic_face_48px" class="svg-ic_face_48px-dims" alt="ic_face_48px"/>
+						
+					</div>
+					<h2>ic_face_48px</h2>
+				</li>
+				<li title="ic_favorite_48px">
+					<div class="icon-box">
+						
+						<!-- ic_favorite_48px -->
+						<img src="action.svg#ic_favorite_48px" class="svg-ic_favorite_48px-dims" alt="ic_favorite_48px"/>
+						
+					</div>
+					<h2>ic_favorite_48px</h2>
+				</li>
+				<li title="ic_favorite_border_48px">
+					<div class="icon-box">
+						
+						<!-- ic_favorite_border_48px -->
+						<img src="action.svg#ic_favorite_border_48px" class="svg-ic_favorite_border_48px-dims" alt="ic_favorite_border_48px"/>
+						
+					</div>
+					<h2>ic_favorite_border_48px</h2>
+				</li>
+				<li title="ic_feedback_48px">
+					<div class="icon-box">
+						
+						<!-- ic_feedback_48px -->
+						<img src="action.svg#ic_feedback_48px" class="svg-ic_feedback_48px-dims" alt="ic_feedback_48px"/>
+						
+					</div>
+					<h2>ic_feedback_48px</h2>
+				</li>
+				<li title="ic_find_in_page_48px">
+					<div class="icon-box">
+						
+						<!-- ic_find_in_page_48px -->
+						<img src="action.svg#ic_find_in_page_48px" class="svg-ic_find_in_page_48px-dims" alt="ic_find_in_page_48px"/>
+						
+					</div>
+					<h2>ic_find_in_page_48px</h2>
+				</li>
+				<li title="ic_find_replace_48px">
+					<div class="icon-box">
+						
+						<!-- ic_find_replace_48px -->
+						<img src="action.svg#ic_find_replace_48px" class="svg-ic_find_replace_48px-dims" alt="ic_find_replace_48px"/>
+						
+					</div>
+					<h2>ic_find_replace_48px</h2>
+				</li>
+				<li title="ic_flight_land_48px">
+					<div class="icon-box">
+						
+						<!-- ic_flight_land_48px -->
+						<img src="action.svg#ic_flight_land_48px" class="svg-ic_flight_land_48px-dims" alt="ic_flight_land_48px"/>
+						
+					</div>
+					<h2>ic_flight_land_48px</h2>
+				</li>
+				<li title="ic_flight_takeoff_48px">
+					<div class="icon-box">
+						
+						<!-- ic_flight_takeoff_48px -->
+						<img src="action.svg#ic_flight_takeoff_48px" class="svg-ic_flight_takeoff_48px-dims" alt="ic_flight_takeoff_48px"/>
+						
+					</div>
+					<h2>ic_flight_takeoff_48px</h2>
+				</li>
+				<li title="ic_flip_to_back_48px">
+					<div class="icon-box">
+						
+						<!-- ic_flip_to_back_48px -->
+						<img src="action.svg#ic_flip_to_back_48px" class="svg-ic_flip_to_back_48px-dims" alt="ic_flip_to_back_48px"/>
+						
+					</div>
+					<h2>ic_flip_to_back_48px</h2>
+				</li>
+				<li title="ic_flip_to_front_48px">
+					<div class="icon-box">
+						
+						<!-- ic_flip_to_front_48px -->
+						<img src="action.svg#ic_flip_to_front_48px" class="svg-ic_flip_to_front_48px-dims" alt="ic_flip_to_front_48px"/>
+						
+					</div>
+					<h2>ic_flip_to_front_48px</h2>
+				</li>
+				<li title="ic_get_app_48px">
+					<div class="icon-box">
+						
+						<!-- ic_get_app_48px -->
+						<img src="action.svg#ic_get_app_48px" class="svg-ic_get_app_48px-dims" alt="ic_get_app_48px"/>
+						
+					</div>
+					<h2>ic_get_app_48px</h2>
+				</li>
+				<li title="ic_grade_48px">
+					<div class="icon-box">
+						
+						<!-- ic_grade_48px -->
+						<img src="action.svg#ic_grade_48px" class="svg-ic_grade_48px-dims" alt="ic_grade_48px"/>
+						
+					</div>
+					<h2>ic_grade_48px</h2>
+				</li>
+				<li title="ic_group_work_48px">
+					<div class="icon-box">
+						
+						<!-- ic_group_work_48px -->
+						<img src="action.svg#ic_group_work_48px" class="svg-ic_group_work_48px-dims" alt="ic_group_work_48px"/>
+						
+					</div>
+					<h2>ic_group_work_48px</h2>
+				</li>
+				<li title="ic_help_48px">
+					<div class="icon-box">
+						
+						<!-- ic_help_48px -->
+						<img src="action.svg#ic_help_48px" class="svg-ic_help_48px-dims" alt="ic_help_48px"/>
+						
+					</div>
+					<h2>ic_help_48px</h2>
+				</li>
+				<li title="ic_highlight_off_48px">
+					<div class="icon-box">
+						
+						<!-- ic_highlight_off_48px -->
+						<img src="action.svg#ic_highlight_off_48px" class="svg-ic_highlight_off_48px-dims" alt="ic_highlight_off_48px"/>
+						
+					</div>
+					<h2>ic_highlight_off_48px</h2>
+				</li>
+				<li title="ic_history_48px">
+					<div class="icon-box">
+						
+						<!-- ic_history_48px -->
+						<img src="action.svg#ic_history_48px" class="svg-ic_history_48px-dims" alt="ic_history_48px"/>
+						
+					</div>
+					<h2>ic_history_48px</h2>
+				</li>
+				<li title="ic_home_48px">
+					<div class="icon-box">
+						
+						<!-- ic_home_48px -->
+						<img src="action.svg#ic_home_48px" class="svg-ic_home_48px-dims" alt="ic_home_48px"/>
+						
+					</div>
+					<h2>ic_home_48px</h2>
+				</li>
+				<li title="ic_hourglass_empty_48px">
+					<div class="icon-box">
+						
+						<!-- ic_hourglass_empty_48px -->
+						<img src="action.svg#ic_hourglass_empty_48px" class="svg-ic_hourglass_empty_48px-dims" alt="ic_hourglass_empty_48px"/>
+						
+					</div>
+					<h2>ic_hourglass_empty_48px</h2>
+				</li>
+				<li title="ic_hourglass_full_48px">
+					<div class="icon-box">
+						
+						<!-- ic_hourglass_full_48px -->
+						<img src="action.svg#ic_hourglass_full_48px" class="svg-ic_hourglass_full_48px-dims" alt="ic_hourglass_full_48px"/>
+						
+					</div>
+					<h2>ic_hourglass_full_48px</h2>
+				</li>
+				<li title="ic_http_48px">
+					<div class="icon-box">
+						
+						<!-- ic_http_48px -->
+						<img src="action.svg#ic_http_48px" class="svg-ic_http_48px-dims" alt="ic_http_48px"/>
+						
+					</div>
+					<h2>ic_http_48px</h2>
+				</li>
+				<li title="ic_https_48px">
+					<div class="icon-box">
+						
+						<!-- ic_https_48px -->
+						<img src="action.svg#ic_https_48px" class="svg-ic_https_48px-dims" alt="ic_https_48px"/>
+						
+					</div>
+					<h2>ic_https_48px</h2>
+				</li>
+				<li title="ic_info_48px">
+					<div class="icon-box">
+						
+						<!-- ic_info_48px -->
+						<img src="action.svg#ic_info_48px" class="svg-ic_info_48px-dims" alt="ic_info_48px"/>
+						
+					</div>
+					<h2>ic_info_48px</h2>
+				</li>
+				<li title="ic_info_outline_48px">
+					<div class="icon-box">
+						
+						<!-- ic_info_outline_48px -->
+						<img src="action.svg#ic_info_outline_48px" class="svg-ic_info_outline_48px-dims" alt="ic_info_outline_48px"/>
+						
+					</div>
+					<h2>ic_info_outline_48px</h2>
+				</li>
+				<li title="ic_input_48px">
+					<div class="icon-box">
+						
+						<!-- ic_input_48px -->
+						<img src="action.svg#ic_input_48px" class="svg-ic_input_48px-dims" alt="ic_input_48px"/>
+						
+					</div>
+					<h2>ic_input_48px</h2>
+				</li>
+				<li title="ic_invert_colors_48px">
+					<div class="icon-box">
+						
+						<!-- ic_invert_colors_48px -->
+						<img src="action.svg#ic_invert_colors_48px" class="svg-ic_invert_colors_48px-dims" alt="ic_invert_colors_48px"/>
+						
+					</div>
+					<h2>ic_invert_colors_48px</h2>
+				</li>
+				<li title="ic_label_48px">
+					<div class="icon-box">
+						
+						<!-- ic_label_48px -->
+						<img src="action.svg#ic_label_48px" class="svg-ic_label_48px-dims" alt="ic_label_48px"/>
+						
+					</div>
+					<h2>ic_label_48px</h2>
+				</li>
+				<li title="ic_label_outline_48px">
+					<div class="icon-box">
+						
+						<!-- ic_label_outline_48px -->
+						<img src="action.svg#ic_label_outline_48px" class="svg-ic_label_outline_48px-dims" alt="ic_label_outline_48px"/>
+						
+					</div>
+					<h2>ic_label_outline_48px</h2>
+				</li>
+				<li title="ic_language_48px">
+					<div class="icon-box">
+						
+						<!-- ic_language_48px -->
+						<img src="action.svg#ic_language_48px" class="svg-ic_language_48px-dims" alt="ic_language_48px"/>
+						
+					</div>
+					<h2>ic_language_48px</h2>
+				</li>
+				<li title="ic_launch_48px">
+					<div class="icon-box">
+						
+						<!-- ic_launch_48px -->
+						<img src="action.svg#ic_launch_48px" class="svg-ic_launch_48px-dims" alt="ic_launch_48px"/>
+						
+					</div>
+					<h2>ic_launch_48px</h2>
+				</li>
+				<li title="ic_list_48px">
+					<div class="icon-box">
+						
+						<!-- ic_list_48px -->
+						<img src="action.svg#ic_list_48px" class="svg-ic_list_48px-dims" alt="ic_list_48px"/>
+						
+					</div>
+					<h2>ic_list_48px</h2>
+				</li>
+				<li title="ic_lock_48px">
+					<div class="icon-box">
+						
+						<!-- ic_lock_48px -->
+						<img src="action.svg#ic_lock_48px" class="svg-ic_lock_48px-dims" alt="ic_lock_48px"/>
+						
+					</div>
+					<h2>ic_lock_48px</h2>
+				</li>
+				<li title="ic_lock_open_48px">
+					<div class="icon-box">
+						
+						<!-- ic_lock_open_48px -->
+						<img src="action.svg#ic_lock_open_48px" class="svg-ic_lock_open_48px-dims" alt="ic_lock_open_48px"/>
+						
+					</div>
+					<h2>ic_lock_open_48px</h2>
+				</li>
+				<li title="ic_lock_outline_48px">
+					<div class="icon-box">
+						
+						<!-- ic_lock_outline_48px -->
+						<img src="action.svg#ic_lock_outline_48px" class="svg-ic_lock_outline_48px-dims" alt="ic_lock_outline_48px"/>
+						
+					</div>
+					<h2>ic_lock_outline_48px</h2>
+				</li>
+				<li title="ic_loyalty_48px">
+					<div class="icon-box">
+						
+						<!-- ic_loyalty_48px -->
+						<img src="action.svg#ic_loyalty_48px" class="svg-ic_loyalty_48px-dims" alt="ic_loyalty_48px"/>
+						
+					</div>
+					<h2>ic_loyalty_48px</h2>
+				</li>
+				<li title="ic_markunread_mailbox_48px">
+					<div class="icon-box">
+						
+						<!-- ic_markunread_mailbox_48px -->
+						<img src="action.svg#ic_markunread_mailbox_48px" class="svg-ic_markunread_mailbox_48px-dims" alt="ic_markunread_mailbox_48px"/>
+						
+					</div>
+					<h2>ic_markunread_mailbox_48px</h2>
+				</li>
+				<li title="ic_note_add_48px">
+					<div class="icon-box">
+						
+						<!-- ic_note_add_48px -->
+						<img src="action.svg#ic_note_add_48px" class="svg-ic_note_add_48px-dims" alt="ic_note_add_48px"/>
+						
+					</div>
+					<h2>ic_note_add_48px</h2>
+				</li>
+				<li title="ic_open_in_browser_48px">
+					<div class="icon-box">
+						
+						<!-- ic_open_in_browser_48px -->
+						<img src="action.svg#ic_open_in_browser_48px" class="svg-ic_open_in_browser_48px-dims" alt="ic_open_in_browser_48px"/>
+						
+					</div>
+					<h2>ic_open_in_browser_48px</h2>
+				</li>
+				<li title="ic_open_in_new_48px">
+					<div class="icon-box">
+						
+						<!-- ic_open_in_new_48px -->
+						<img src="action.svg#ic_open_in_new_48px" class="svg-ic_open_in_new_48px-dims" alt="ic_open_in_new_48px"/>
+						
+					</div>
+					<h2>ic_open_in_new_48px</h2>
+				</li>
+				<li title="ic_open_with_48px">
+					<div class="icon-box">
+						
+						<!-- ic_open_with_48px -->
+						<img src="action.svg#ic_open_with_48px" class="svg-ic_open_with_48px-dims" alt="ic_open_with_48px"/>
+						
+					</div>
+					<h2>ic_open_with_48px</h2>
+				</li>
+				<li title="ic_pageview_48px">
+					<div class="icon-box">
+						
+						<!-- ic_pageview_48px -->
+						<img src="action.svg#ic_pageview_48px" class="svg-ic_pageview_48px-dims" alt="ic_pageview_48px"/>
+						
+					</div>
+					<h2>ic_pageview_48px</h2>
+				</li>
+				<li title="ic_payment_48px">
+					<div class="icon-box">
+						
+						<!-- ic_payment_48px -->
+						<img src="action.svg#ic_payment_48px" class="svg-ic_payment_48px-dims" alt="ic_payment_48px"/>
+						
+					</div>
+					<h2>ic_payment_48px</h2>
+				</li>
+				<li title="ic_perm_camera_mic_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_camera_mic_48px -->
+						<img src="action.svg#ic_perm_camera_mic_48px" class="svg-ic_perm_camera_mic_48px-dims" alt="ic_perm_camera_mic_48px"/>
+						
+					</div>
+					<h2>ic_perm_camera_mic_48px</h2>
+				</li>
+				<li title="ic_perm_contact_calendar_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_contact_calendar_48px -->
+						<img src="action.svg#ic_perm_contact_calendar_48px" class="svg-ic_perm_contact_calendar_48px-dims" alt="ic_perm_contact_calendar_48px"/>
+						
+					</div>
+					<h2>ic_perm_contact_calendar_48px</h2>
+				</li>
+				<li title="ic_perm_data_setting_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_data_setting_48px -->
+						<img src="action.svg#ic_perm_data_setting_48px" class="svg-ic_perm_data_setting_48px-dims" alt="ic_perm_data_setting_48px"/>
+						
+					</div>
+					<h2>ic_perm_data_setting_48px</h2>
+				</li>
+				<li title="ic_perm_device_information_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_device_information_48px -->
+						<img src="action.svg#ic_perm_device_information_48px" class="svg-ic_perm_device_information_48px-dims" alt="ic_perm_device_information_48px"/>
+						
+					</div>
+					<h2>ic_perm_device_information_48px</h2>
+				</li>
+				<li title="ic_perm_identity_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_identity_48px -->
+						<img src="action.svg#ic_perm_identity_48px" class="svg-ic_perm_identity_48px-dims" alt="ic_perm_identity_48px"/>
+						
+					</div>
+					<h2>ic_perm_identity_48px</h2>
+				</li>
+				<li title="ic_perm_media_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_media_48px -->
+						<img src="action.svg#ic_perm_media_48px" class="svg-ic_perm_media_48px-dims" alt="ic_perm_media_48px"/>
+						
+					</div>
+					<h2>ic_perm_media_48px</h2>
+				</li>
+				<li title="ic_perm_phone_msg_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_phone_msg_48px -->
+						<img src="action.svg#ic_perm_phone_msg_48px" class="svg-ic_perm_phone_msg_48px-dims" alt="ic_perm_phone_msg_48px"/>
+						
+					</div>
+					<h2>ic_perm_phone_msg_48px</h2>
+				</li>
+				<li title="ic_perm_scan_wifi_48px">
+					<div class="icon-box">
+						
+						<!-- ic_perm_scan_wifi_48px -->
+						<img src="action.svg#ic_perm_scan_wifi_48px" class="svg-ic_perm_scan_wifi_48px-dims" alt="ic_perm_scan_wifi_48px"/>
+						
+					</div>
+					<h2>ic_perm_scan_wifi_48px</h2>
+				</li>
+				<li title="ic_picture_in_picture_48px">
+					<div class="icon-box">
+						
+						<!-- ic_picture_in_picture_48px -->
+						<img src="action.svg#ic_picture_in_picture_48px" class="svg-ic_picture_in_picture_48px-dims" alt="ic_picture_in_picture_48px"/>
+						
+					</div>
+					<h2>ic_picture_in_picture_48px</h2>
+				</li>
+				<li title="ic_play_for_work_48px">
+					<div class="icon-box">
+						
+						<!-- ic_play_for_work_48px -->
+						<img src="action.svg#ic_play_for_work_48px" class="svg-ic_play_for_work_48px-dims" alt="ic_play_for_work_48px"/>
+						
+					</div>
+					<h2>ic_play_for_work_48px</h2>
+				</li>
+				<li title="ic_polymer_48px">
+					<div class="icon-box">
+						
+						<!-- ic_polymer_48px -->
+						<img src="action.svg#ic_polymer_48px" class="svg-ic_polymer_48px-dims" alt="ic_polymer_48px"/>
+						
+					</div>
+					<h2>ic_polymer_48px</h2>
+				</li>
+				<li title="ic_power_settings_new_48px">
+					<div class="icon-box">
+						
+						<!-- ic_power_settings_new_48px -->
+						<img src="action.svg#ic_power_settings_new_48px" class="svg-ic_power_settings_new_48px-dims" alt="ic_power_settings_new_48px"/>
+						
+					</div>
+					<h2>ic_power_settings_new_48px</h2>
+				</li>
+				<li title="ic_print_48px">
+					<div class="icon-box">
+						
+						<!-- ic_print_48px -->
+						<img src="action.svg#ic_print_48px" class="svg-ic_print_48px-dims" alt="ic_print_48px"/>
+						
+					</div>
+					<h2>ic_print_48px</h2>
+				</li>
+				<li title="ic_query_builder_48px">
+					<div class="icon-box">
+						
+						<!-- ic_query_builder_48px -->
+						<img src="action.svg#ic_query_builder_48px" class="svg-ic_query_builder_48px-dims" alt="ic_query_builder_48px"/>
+						
+					</div>
+					<h2>ic_query_builder_48px</h2>
+				</li>
+				<li title="ic_question_answer_48px">
+					<div class="icon-box">
+						
+						<!-- ic_question_answer_48px -->
+						<img src="action.svg#ic_question_answer_48px" class="svg-ic_question_answer_48px-dims" alt="ic_question_answer_48px"/>
+						
+					</div>
+					<h2>ic_question_answer_48px</h2>
+				</li>
+				<li title="ic_receipt_48px">
+					<div class="icon-box">
+						
+						<!-- ic_receipt_48px -->
+						<img src="action.svg#ic_receipt_48px" class="svg-ic_receipt_48px-dims" alt="ic_receipt_48px"/>
+						
+					</div>
+					<h2>ic_receipt_48px</h2>
+				</li>
+				<li title="ic_redeem_48px">
+					<div class="icon-box">
+						
+						<!-- ic_redeem_48px -->
+						<img src="action.svg#ic_redeem_48px" class="svg-ic_redeem_48px-dims" alt="ic_redeem_48px"/>
+						
+					</div>
+					<h2>ic_redeem_48px</h2>
+				</li>
+				<li title="ic_report_problem_48px">
+					<div class="icon-box">
+						
+						<!-- ic_report_problem_48px -->
+						<img src="action.svg#ic_report_problem_48px" class="svg-ic_report_problem_48px-dims" alt="ic_report_problem_48px"/>
+						
+					</div>
+					<h2>ic_report_problem_48px</h2>
+				</li>
+				<li title="ic_restore_48px">
+					<div class="icon-box">
+						
+						<!-- ic_restore_48px -->
+						<img src="action.svg#ic_restore_48px" class="svg-ic_restore_48px-dims" alt="ic_restore_48px"/>
+						
+					</div>
+					<h2>ic_restore_48px</h2>
+				</li>
+				<li title="ic_room_48px">
+					<div class="icon-box">
+						
+						<!-- ic_room_48px -->
+						<img src="action.svg#ic_room_48px" class="svg-ic_room_48px-dims" alt="ic_room_48px"/>
+						
+					</div>
+					<h2>ic_room_48px</h2>
+				</li>
+				<li title="ic_schedule_48px">
+					<div class="icon-box">
+						
+						<!-- ic_schedule_48px -->
+						<img src="action.svg#ic_schedule_48px" class="svg-ic_schedule_48px-dims" alt="ic_schedule_48px"/>
+						
+					</div>
+					<h2>ic_schedule_48px</h2>
+				</li>
+				<li title="ic_search_48px">
+					<div class="icon-box">
+						
+						<!-- ic_search_48px -->
+						<img src="action.svg#ic_search_48px" class="svg-ic_search_48px-dims" alt="ic_search_48px"/>
+						
+					</div>
+					<h2>ic_search_48px</h2>
+				</li>
+				<li title="ic_settings_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_48px -->
+						<img src="action.svg#ic_settings_48px" class="svg-ic_settings_48px-dims" alt="ic_settings_48px"/>
+						
+					</div>
+					<h2>ic_settings_48px</h2>
+				</li>
+				<li title="ic_settings_applications_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_applications_48px -->
+						<img src="action.svg#ic_settings_applications_48px" class="svg-ic_settings_applications_48px-dims" alt="ic_settings_applications_48px"/>
+						
+					</div>
+					<h2>ic_settings_applications_48px</h2>
+				</li>
+				<li title="ic_settings_backup_restore_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_backup_restore_48px -->
+						<img src="action.svg#ic_settings_backup_restore_48px" class="svg-ic_settings_backup_restore_48px-dims" alt="ic_settings_backup_restore_48px"/>
+						
+					</div>
+					<h2>ic_settings_backup_restore_48px</h2>
+				</li>
+				<li title="ic_settings_bluetooth_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_bluetooth_48px -->
+						<img src="action.svg#ic_settings_bluetooth_48px" class="svg-ic_settings_bluetooth_48px-dims" alt="ic_settings_bluetooth_48px"/>
+						
+					</div>
+					<h2>ic_settings_bluetooth_48px</h2>
+				</li>
+				<li title="ic_settings_brightness_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_brightness_48px -->
+						<img src="action.svg#ic_settings_brightness_48px" class="svg-ic_settings_brightness_48px-dims" alt="ic_settings_brightness_48px"/>
+						
+					</div>
+					<h2>ic_settings_brightness_48px</h2>
+				</li>
+				<li title="ic_settings_cell_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_cell_48px -->
+						<img src="action.svg#ic_settings_cell_48px" class="svg-ic_settings_cell_48px-dims" alt="ic_settings_cell_48px"/>
+						
+					</div>
+					<h2>ic_settings_cell_48px</h2>
+				</li>
+				<li title="ic_settings_ethernet_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_ethernet_48px -->
+						<img src="action.svg#ic_settings_ethernet_48px" class="svg-ic_settings_ethernet_48px-dims" alt="ic_settings_ethernet_48px"/>
+						
+					</div>
+					<h2>ic_settings_ethernet_48px</h2>
+				</li>
+				<li title="ic_settings_input_antenna_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_input_antenna_48px -->
+						<img src="action.svg#ic_settings_input_antenna_48px" class="svg-ic_settings_input_antenna_48px-dims" alt="ic_settings_input_antenna_48px"/>
+						
+					</div>
+					<h2>ic_settings_input_antenna_48px</h2>
+				</li>
+				<li title="ic_settings_input_component_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_input_component_48px -->
+						<img src="action.svg#ic_settings_input_component_48px" class="svg-ic_settings_input_component_48px-dims" alt="ic_settings_input_component_48px"/>
+						
+					</div>
+					<h2>ic_settings_input_component_48px</h2>
+				</li>
+				<li title="ic_settings_input_composite_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_input_composite_48px -->
+						<img src="action.svg#ic_settings_input_composite_48px" class="svg-ic_settings_input_composite_48px-dims" alt="ic_settings_input_composite_48px"/>
+						
+					</div>
+					<h2>ic_settings_input_composite_48px</h2>
+				</li>
+				<li title="ic_settings_input_hdmi_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_input_hdmi_48px -->
+						<img src="action.svg#ic_settings_input_hdmi_48px" class="svg-ic_settings_input_hdmi_48px-dims" alt="ic_settings_input_hdmi_48px"/>
+						
+					</div>
+					<h2>ic_settings_input_hdmi_48px</h2>
+				</li>
+				<li title="ic_settings_input_svideo_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_input_svideo_48px -->
+						<img src="action.svg#ic_settings_input_svideo_48px" class="svg-ic_settings_input_svideo_48px-dims" alt="ic_settings_input_svideo_48px"/>
+						
+					</div>
+					<h2>ic_settings_input_svideo_48px</h2>
+				</li>
+				<li title="ic_settings_overscan_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_overscan_48px -->
+						<img src="action.svg#ic_settings_overscan_48px" class="svg-ic_settings_overscan_48px-dims" alt="ic_settings_overscan_48px"/>
+						
+					</div>
+					<h2>ic_settings_overscan_48px</h2>
+				</li>
+				<li title="ic_settings_phone_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_phone_48px -->
+						<img src="action.svg#ic_settings_phone_48px" class="svg-ic_settings_phone_48px-dims" alt="ic_settings_phone_48px"/>
+						
+					</div>
+					<h2>ic_settings_phone_48px</h2>
+				</li>
+				<li title="ic_settings_power_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_power_48px -->
+						<img src="action.svg#ic_settings_power_48px" class="svg-ic_settings_power_48px-dims" alt="ic_settings_power_48px"/>
+						
+					</div>
+					<h2>ic_settings_power_48px</h2>
+				</li>
+				<li title="ic_settings_remote_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_remote_48px -->
+						<img src="action.svg#ic_settings_remote_48px" class="svg-ic_settings_remote_48px-dims" alt="ic_settings_remote_48px"/>
+						
+					</div>
+					<h2>ic_settings_remote_48px</h2>
+				</li>
+				<li title="ic_settings_voice_48px">
+					<div class="icon-box">
+						
+						<!-- ic_settings_voice_48px -->
+						<img src="action.svg#ic_settings_voice_48px" class="svg-ic_settings_voice_48px-dims" alt="ic_settings_voice_48px"/>
+						
+					</div>
+					<h2>ic_settings_voice_48px</h2>
+				</li>
+				<li title="ic_shop_48px">
+					<div class="icon-box">
+						
+						<!-- ic_shop_48px -->
+						<img src="action.svg#ic_shop_48px" class="svg-ic_shop_48px-dims" alt="ic_shop_48px"/>
+						
+					</div>
+					<h2>ic_shop_48px</h2>
+				</li>
+				<li title="ic_shop_two_48px">
+					<div class="icon-box">
+						
+						<!-- ic_shop_two_48px -->
+						<img src="action.svg#ic_shop_two_48px" class="svg-ic_shop_two_48px-dims" alt="ic_shop_two_48px"/>
+						
+					</div>
+					<h2>ic_shop_two_48px</h2>
+				</li>
+				<li title="ic_shopping_basket_48px">
+					<div class="icon-box">
+						
+						<!-- ic_shopping_basket_48px -->
+						<img src="action.svg#ic_shopping_basket_48px" class="svg-ic_shopping_basket_48px-dims" alt="ic_shopping_basket_48px"/>
+						
+					</div>
+					<h2>ic_shopping_basket_48px</h2>
+				</li>
+				<li title="ic_shopping_cart_48px">
+					<div class="icon-box">
+						
+						<!-- ic_shopping_cart_48px -->
+						<img src="action.svg#ic_shopping_cart_48px" class="svg-ic_shopping_cart_48px-dims" alt="ic_shopping_cart_48px"/>
+						
+					</div>
+					<h2>ic_shopping_cart_48px</h2>
+				</li>
+				<li title="ic_speaker_notes_48px">
+					<div class="icon-box">
+						
+						<!-- ic_speaker_notes_48px -->
+						<img src="action.svg#ic_speaker_notes_48px" class="svg-ic_speaker_notes_48px-dims" alt="ic_speaker_notes_48px"/>
+						
+					</div>
+					<h2>ic_speaker_notes_48px</h2>
+				</li>
+				<li title="ic_spellcheck_48px">
+					<div class="icon-box">
+						
+						<!-- ic_spellcheck_48px -->
+						<img src="action.svg#ic_spellcheck_48px" class="svg-ic_spellcheck_48px-dims" alt="ic_spellcheck_48px"/>
+						
+					</div>
+					<h2>ic_spellcheck_48px</h2>
+				</li>
+				<li title="ic_stars_48px">
+					<div class="icon-box">
+						
+						<!-- ic_stars_48px -->
+						<img src="action.svg#ic_stars_48px" class="svg-ic_stars_48px-dims" alt="ic_stars_48px"/>
+						
+					</div>
+					<h2>ic_stars_48px</h2>
+				</li>
+				<li title="ic_store_48px">
+					<div class="icon-box">
+						
+						<!-- ic_store_48px -->
+						<img src="action.svg#ic_store_48px" class="svg-ic_store_48px-dims" alt="ic_store_48px"/>
+						
+					</div>
+					<h2>ic_store_48px</h2>
+				</li>
+				<li title="ic_subject_48px">
+					<div class="icon-box">
+						
+						<!-- ic_subject_48px -->
+						<img src="action.svg#ic_subject_48px" class="svg-ic_subject_48px-dims" alt="ic_subject_48px"/>
+						
+					</div>
+					<h2>ic_subject_48px</h2>
+				</li>
+				<li title="ic_supervisor_account_48px">
+					<div class="icon-box">
+						
+						<!-- ic_supervisor_account_48px -->
+						<img src="action.svg#ic_supervisor_account_48px" class="svg-ic_supervisor_account_48px-dims" alt="ic_supervisor_account_48px"/>
+						
+					</div>
+					<h2>ic_supervisor_account_48px</h2>
+				</li>
+				<li title="ic_swap_horiz_48px">
+					<div class="icon-box">
+						
+						<!-- ic_swap_horiz_48px -->
+						<img src="action.svg#ic_swap_horiz_48px" class="svg-ic_swap_horiz_48px-dims" alt="ic_swap_horiz_48px"/>
+						
+					</div>
+					<h2>ic_swap_horiz_48px</h2>
+				</li>
+				<li title="ic_swap_vert_48px">
+					<div class="icon-box">
+						
+						<!-- ic_swap_vert_48px -->
+						<img src="action.svg#ic_swap_vert_48px" class="svg-ic_swap_vert_48px-dims" alt="ic_swap_vert_48px"/>
+						
+					</div>
+					<h2>ic_swap_vert_48px</h2>
+				</li>
+				<li title="ic_swap_vertical_circle_48px">
+					<div class="icon-box">
+						
+						<!-- ic_swap_vertical_circle_48px -->
+						<img src="action.svg#ic_swap_vertical_circle_48px" class="svg-ic_swap_vertical_circle_48px-dims" alt="ic_swap_vertical_circle_48px"/>
+						
+					</div>
+					<h2>ic_swap_vertical_circle_48px</h2>
+				</li>
+				<li title="ic_system_update_alt_48px">
+					<div class="icon-box">
+						
+						<!-- ic_system_update_alt_48px -->
+						<img src="action.svg#ic_system_update_alt_48px" class="svg-ic_system_update_alt_48px-dims" alt="ic_system_update_alt_48px"/>
+						
+					</div>
+					<h2>ic_system_update_alt_48px</h2>
+				</li>
+				<li title="ic_tab_48px">
+					<div class="icon-box">
+						
+						<!-- ic_tab_48px -->
+						<img src="action.svg#ic_tab_48px" class="svg-ic_tab_48px-dims" alt="ic_tab_48px"/>
+						
+					</div>
+					<h2>ic_tab_48px</h2>
+				</li>
+				<li title="ic_tab_unselected_48px">
+					<div class="icon-box">
+						
+						<!-- ic_tab_unselected_48px -->
+						<img src="action.svg#ic_tab_unselected_48px" class="svg-ic_tab_unselected_48px-dims" alt="ic_tab_unselected_48px"/>
+						
+					</div>
+					<h2>ic_tab_unselected_48px</h2>
+				</li>
+				<li title="ic_theaters_48px">
+					<div class="icon-box">
+						
+						<!-- ic_theaters_48px -->
+						<img src="action.svg#ic_theaters_48px" class="svg-ic_theaters_48px-dims" alt="ic_theaters_48px"/>
+						
+					</div>
+					<h2>ic_theaters_48px</h2>
+				</li>
+				<li title="ic_thumb_down_48px">
+					<div class="icon-box">
+						
+						<!-- ic_thumb_down_48px -->
+						<img src="action.svg#ic_thumb_down_48px" class="svg-ic_thumb_down_48px-dims" alt="ic_thumb_down_48px"/>
+						
+					</div>
+					<h2>ic_thumb_down_48px</h2>
+				</li>
+				<li title="ic_thumb_up_48px">
+					<div class="icon-box">
+						
+						<!-- ic_thumb_up_48px -->
+						<img src="action.svg#ic_thumb_up_48px" class="svg-ic_thumb_up_48px-dims" alt="ic_thumb_up_48px"/>
+						
+					</div>
+					<h2>ic_thumb_up_48px</h2>
+				</li>
+				<li title="ic_thumbs_up_down_48px">
+					<div class="icon-box">
+						
+						<!-- ic_thumbs_up_down_48px -->
+						<img src="action.svg#ic_thumbs_up_down_48px" class="svg-ic_thumbs_up_down_48px-dims" alt="ic_thumbs_up_down_48px"/>
+						
+					</div>
+					<h2>ic_thumbs_up_down_48px</h2>
+				</li>
+				<li title="ic_toc_48px">
+					<div class="icon-box">
+						
+						<!-- ic_toc_48px -->
+						<img src="action.svg#ic_toc_48px" class="svg-ic_toc_48px-dims" alt="ic_toc_48px"/>
+						
+					</div>
+					<h2>ic_toc_48px</h2>
+				</li>
+				<li title="ic_today_48px">
+					<div class="icon-box">
+						
+						<!-- ic_today_48px -->
+						<img src="action.svg#ic_today_48px" class="svg-ic_today_48px-dims" alt="ic_today_48px"/>
+						
+					</div>
+					<h2>ic_today_48px</h2>
+				</li>
+				<li title="ic_toll_48px">
+					<div class="icon-box">
+						
+						<!-- ic_toll_48px -->
+						<img src="action.svg#ic_toll_48px" class="svg-ic_toll_48px-dims" alt="ic_toll_48px"/>
+						
+					</div>
+					<h2>ic_toll_48px</h2>
+				</li>
+				<li title="ic_track_changes_48px">
+					<div class="icon-box">
+						
+						<!-- ic_track_changes_48px -->
+						<img src="action.svg#ic_track_changes_48px" class="svg-ic_track_changes_48px-dims" alt="ic_track_changes_48px"/>
+						
+					</div>
+					<h2>ic_track_changes_48px</h2>
+				</li>
+				<li title="ic_translate_48px">
+					<div class="icon-box">
+						
+						<!-- ic_translate_48px -->
+						<img src="action.svg#ic_translate_48px" class="svg-ic_translate_48px-dims" alt="ic_translate_48px"/>
+						
+					</div>
+					<h2>ic_translate_48px</h2>
+				</li>
+				<li title="ic_trending_down_48px">
+					<div class="icon-box">
+						
+						<!-- ic_trending_down_48px -->
+						<img src="action.svg#ic_trending_down_48px" class="svg-ic_trending_down_48px-dims" alt="ic_trending_down_48px"/>
+						
+					</div>
+					<h2>ic_trending_down_48px</h2>
+				</li>
+				<li title="ic_trending_flat_48px">
+					<div class="icon-box">
+						
+						<!-- ic_trending_flat_48px -->
+						<img src="action.svg#ic_trending_flat_48px" class="svg-ic_trending_flat_48px-dims" alt="ic_trending_flat_48px"/>
+						
+					</div>
+					<h2>ic_trending_flat_48px</h2>
+				</li>
+				<li title="ic_trending_up_48px">
+					<div class="icon-box">
+						
+						<!-- ic_trending_up_48px -->
+						<img src="action.svg#ic_trending_up_48px" class="svg-ic_trending_up_48px-dims" alt="ic_trending_up_48px"/>
+						
+					</div>
+					<h2>ic_trending_up_48px</h2>
+				</li>
+				<li title="ic_turned_in_48px">
+					<div class="icon-box">
+						
+						<!-- ic_turned_in_48px -->
+						<img src="action.svg#ic_turned_in_48px" class="svg-ic_turned_in_48px-dims" alt="ic_turned_in_48px"/>
+						
+					</div>
+					<h2>ic_turned_in_48px</h2>
+				</li>
+				<li title="ic_turned_in_not_48px">
+					<div class="icon-box">
+						
+						<!-- ic_turned_in_not_48px -->
+						<img src="action.svg#ic_turned_in_not_48px" class="svg-ic_turned_in_not_48px-dims" alt="ic_turned_in_not_48px"/>
+						
+					</div>
+					<h2>ic_turned_in_not_48px</h2>
+				</li>
+				<li title="ic_verified_user_48px">
+					<div class="icon-box">
+						
+						<!-- ic_verified_user_48px -->
+						<img src="action.svg#ic_verified_user_48px" class="svg-ic_verified_user_48px-dims" alt="ic_verified_user_48px"/>
+						
+					</div>
+					<h2>ic_verified_user_48px</h2>
+				</li>
+				<li title="ic_view_agenda_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_agenda_48px -->
+						<img src="action.svg#ic_view_agenda_48px" class="svg-ic_view_agenda_48px-dims" alt="ic_view_agenda_48px"/>
+						
+					</div>
+					<h2>ic_view_agenda_48px</h2>
+				</li>
+				<li title="ic_view_array_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_array_48px -->
+						<img src="action.svg#ic_view_array_48px" class="svg-ic_view_array_48px-dims" alt="ic_view_array_48px"/>
+						
+					</div>
+					<h2>ic_view_array_48px</h2>
+				</li>
+				<li title="ic_view_carousel_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_carousel_48px -->
+						<img src="action.svg#ic_view_carousel_48px" class="svg-ic_view_carousel_48px-dims" alt="ic_view_carousel_48px"/>
+						
+					</div>
+					<h2>ic_view_carousel_48px</h2>
+				</li>
+				<li title="ic_view_column_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_column_48px -->
+						<img src="action.svg#ic_view_column_48px" class="svg-ic_view_column_48px-dims" alt="ic_view_column_48px"/>
+						
+					</div>
+					<h2>ic_view_column_48px</h2>
+				</li>
+				<li title="ic_view_day_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_day_48px -->
+						<img src="action.svg#ic_view_day_48px" class="svg-ic_view_day_48px-dims" alt="ic_view_day_48px"/>
+						
+					</div>
+					<h2>ic_view_day_48px</h2>
+				</li>
+				<li title="ic_view_headline_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_headline_48px -->
+						<img src="action.svg#ic_view_headline_48px" class="svg-ic_view_headline_48px-dims" alt="ic_view_headline_48px"/>
+						
+					</div>
+					<h2>ic_view_headline_48px</h2>
+				</li>
+				<li title="ic_view_list_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_list_48px -->
+						<img src="action.svg#ic_view_list_48px" class="svg-ic_view_list_48px-dims" alt="ic_view_list_48px"/>
+						
+					</div>
+					<h2>ic_view_list_48px</h2>
+				</li>
+				<li title="ic_view_module_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_module_48px -->
+						<img src="action.svg#ic_view_module_48px" class="svg-ic_view_module_48px-dims" alt="ic_view_module_48px"/>
+						
+					</div>
+					<h2>ic_view_module_48px</h2>
+				</li>
+				<li title="ic_view_quilt_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_quilt_48px -->
+						<img src="action.svg#ic_view_quilt_48px" class="svg-ic_view_quilt_48px-dims" alt="ic_view_quilt_48px"/>
+						
+					</div>
+					<h2>ic_view_quilt_48px</h2>
+				</li>
+				<li title="ic_view_stream_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_stream_48px -->
+						<img src="action.svg#ic_view_stream_48px" class="svg-ic_view_stream_48px-dims" alt="ic_view_stream_48px"/>
+						
+					</div>
+					<h2>ic_view_stream_48px</h2>
+				</li>
+				<li title="ic_view_week_48px">
+					<div class="icon-box">
+						
+						<!-- ic_view_week_48px -->
+						<img src="action.svg#ic_view_week_48px" class="svg-ic_view_week_48px-dims" alt="ic_view_week_48px"/>
+						
+					</div>
+					<h2>ic_view_week_48px</h2>
+				</li>
+				<li title="ic_visibility_48px">
+					<div class="icon-box">
+						
+						<!-- ic_visibility_48px -->
+						<img src="action.svg#ic_visibility_48px" class="svg-ic_visibility_48px-dims" alt="ic_visibility_48px"/>
+						
+					</div>
+					<h2>ic_visibility_48px</h2>
+				</li>
+				<li title="ic_visibility_off_48px">
+					<div class="icon-box">
+						
+						<!-- ic_visibility_off_48px -->
+						<img src="action.svg#ic_visibility_off_48px" class="svg-ic_visibility_off_48px-dims" alt="ic_visibility_off_48px"/>
+						
+					</div>
+					<h2>ic_visibility_off_48px</h2>
+				</li>
+				<li title="ic_work_48px">
+					<div class="icon-box">
+						
+						<!-- ic_work_48px -->
+						<img src="action.svg#ic_work_48px" class="svg-ic_work_48px-dims" alt="ic_work_48px"/>
+						
+					</div>
+					<h2>ic_work_48px</h2>
+				</li>
+				<li title="ic_youtube_searched_for_48px">
+					<div class="icon-box">
+						
+						<!-- ic_youtube_searched_for_48px -->
+						<img src="action.svg#ic_youtube_searched_for_48px" class="svg-ic_youtube_searched_for_48px-dims" alt="ic_youtube_searched_for_48px"/>
+						
+					</div>
+					<h2>ic_youtube_searched_for_48px</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Sat, 08 Aug 2015 18:09:02 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>
