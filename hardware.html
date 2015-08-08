@@ -5,9 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<title>SVG stack preview | svg-sprite</title>
 		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
-		
+
 <!--
-	
+
 Sprite shape dimensions
 ====================================================================================================
 You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
@@ -79,423 +79,423 @@ They might well be outsourced to an external stylesheet of course.
 			</ul>
 		</header>
 		<section>
-			
+
 <!--
-	
+
 SVG stack
 ====================================================================================================
 These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
 external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
-selector is used to show the very shape that is referenced by the fragment identifier.  
+selector is used to show the very shape that is referenced by the fragment identifier.
 
 -->
 
 			<ul>
-				
+
 				<li title="ic_cast_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_cast_48px -->
-						<img src="hardware.svg#ic_cast_48px" class="svg-ic_cast_48px-dims" alt="ic_cast_48px"/>
-						
+						<img src="hardware.svg#cast" class="svg-ic_cast_48px-dims" alt="ic_cast_48px"/>
+
 					</div>
-					<h2>ic_cast_48px</h2>
+					<h2>cast</h2>
 				</li>
 				<li title="ic_cast_connected_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_cast_connected_48px -->
-						<img src="hardware.svg#ic_cast_connected_48px" class="svg-ic_cast_connected_48px-dims" alt="ic_cast_connected_48px"/>
-						
+						<img src="hardware.svg#cast_connected" class="svg-ic_cast_connected_48px-dims" alt="ic_cast_connected_48px"/>
+
 					</div>
-					<h2>ic_cast_connected_48px</h2>
+					<h2>cast_connected</h2>
 				</li>
 				<li title="ic_computer_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_computer_48px -->
-						<img src="hardware.svg#ic_computer_48px" class="svg-ic_computer_48px-dims" alt="ic_computer_48px"/>
-						
+						<img src="hardware.svg#computer" class="svg-ic_computer_48px-dims" alt="ic_computer_48px"/>
+
 					</div>
-					<h2>ic_computer_48px</h2>
+					<h2>computer</h2>
 				</li>
 				<li title="ic_desktop_mac_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_desktop_mac_48px -->
-						<img src="hardware.svg#ic_desktop_mac_48px" class="svg-ic_desktop_mac_48px-dims" alt="ic_desktop_mac_48px"/>
-						
+						<img src="hardware.svg#desktop_mac" class="svg-ic_desktop_mac_48px-dims" alt="ic_desktop_mac_48px"/>
+
 					</div>
-					<h2>ic_desktop_mac_48px</h2>
+					<h2>desktop_mac</h2>
 				</li>
 				<li title="ic_desktop_windows_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_desktop_windows_48px -->
-						<img src="hardware.svg#ic_desktop_windows_48px" class="svg-ic_desktop_windows_48px-dims" alt="ic_desktop_windows_48px"/>
-						
+						<img src="hardware.svg#desktop_windows" class="svg-ic_desktop_windows_48px-dims" alt="ic_desktop_windows_48px"/>
+
 					</div>
-					<h2>ic_desktop_windows_48px</h2>
+					<h2>desktop_windows</h2>
 				</li>
 				<li title="ic_developer_board_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_developer_board_48px -->
-						<img src="hardware.svg#ic_developer_board_48px" class="svg-ic_developer_board_48px-dims" alt="ic_developer_board_48px"/>
-						
+						<img src="hardware.svg#developer_board" class="svg-ic_developer_board_48px-dims" alt="ic_developer_board_48px"/>
+
 					</div>
-					<h2>ic_developer_board_48px</h2>
+					<h2>developer_board</h2>
 				</li>
 				<li title="ic_dock_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_dock_48px -->
-						<img src="hardware.svg#ic_dock_48px" class="svg-ic_dock_48px-dims" alt="ic_dock_48px"/>
-						
+						<img src="hardware.svg#dock" class="svg-ic_dock_48px-dims" alt="ic_dock_48px"/>
+
 					</div>
-					<h2>ic_dock_48px</h2>
+					<h2>dock</h2>
 				</li>
 				<li title="ic_gamepad_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_gamepad_48px -->
-						<img src="hardware.svg#ic_gamepad_48px" class="svg-ic_gamepad_48px-dims" alt="ic_gamepad_48px"/>
-						
+						<img src="hardware.svg#gamepad" class="svg-ic_gamepad_48px-dims" alt="ic_gamepad_48px"/>
+
 					</div>
-					<h2>ic_gamepad_48px</h2>
+					<h2>gamepad</h2>
 				</li>
 				<li title="ic_headset_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_headset_48px -->
-						<img src="hardware.svg#ic_headset_48px" class="svg-ic_headset_48px-dims" alt="ic_headset_48px"/>
-						
+						<img src="hardware.svg#headset" class="svg-ic_headset_48px-dims" alt="ic_headset_48px"/>
+
 					</div>
-					<h2>ic_headset_48px</h2>
+					<h2>headset</h2>
 				</li>
 				<li title="ic_headset_mic_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_headset_mic_48px -->
-						<img src="hardware.svg#ic_headset_mic_48px" class="svg-ic_headset_mic_48px-dims" alt="ic_headset_mic_48px"/>
-						
+						<img src="hardware.svg#headset_mic" class="svg-ic_headset_mic_48px-dims" alt="ic_headset_mic_48px"/>
+
 					</div>
-					<h2>ic_headset_mic_48px</h2>
+					<h2>headset_mic</h2>
 				</li>
 				<li title="ic_keyboard_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_48px -->
-						<img src="hardware.svg#ic_keyboard_48px" class="svg-ic_keyboard_48px-dims" alt="ic_keyboard_48px"/>
-						
+						<img src="hardware.svg#keyboard" class="svg-ic_keyboard_48px-dims" alt="ic_keyboard_48px"/>
+
 					</div>
-					<h2>ic_keyboard_48px</h2>
+					<h2>keyboard</h2>
 				</li>
 				<li title="ic_keyboard_arrow_down_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_arrow_down_48px -->
-						<img src="hardware.svg#ic_keyboard_arrow_down_48px" class="svg-ic_keyboard_arrow_down_48px-dims" alt="ic_keyboard_arrow_down_48px"/>
-						
+						<img src="hardware.svg#keyboard_arrow_down" class="svg-ic_keyboard_arrow_down_48px-dims" alt="ic_keyboard_arrow_down_48px"/>
+
 					</div>
-					<h2>ic_keyboard_arrow_down_48px</h2>
+					<h2>keyboard_arrow_down</h2>
 				</li>
 				<li title="ic_keyboard_arrow_left_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_arrow_left_48px -->
-						<img src="hardware.svg#ic_keyboard_arrow_left_48px" class="svg-ic_keyboard_arrow_left_48px-dims" alt="ic_keyboard_arrow_left_48px"/>
-						
+						<img src="hardware.svg#keyboard_arrow_left" class="svg-ic_keyboard_arrow_left_48px-dims" alt="ic_keyboard_arrow_left_48px"/>
+
 					</div>
-					<h2>ic_keyboard_arrow_left_48px</h2>
+					<h2>keyboard_arrow_left</h2>
 				</li>
 				<li title="ic_keyboard_arrow_right_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_arrow_right_48px -->
-						<img src="hardware.svg#ic_keyboard_arrow_right_48px" class="svg-ic_keyboard_arrow_right_48px-dims" alt="ic_keyboard_arrow_right_48px"/>
-						
+						<img src="hardware.svg#keyboard_arrow_right" class="svg-ic_keyboard_arrow_right_48px-dims" alt="ic_keyboard_arrow_right_48px"/>
+
 					</div>
-					<h2>ic_keyboard_arrow_right_48px</h2>
+					<h2>keyboard_arrow_right</h2>
 				</li>
 				<li title="ic_keyboard_arrow_up_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_arrow_up_48px -->
-						<img src="hardware.svg#ic_keyboard_arrow_up_48px" class="svg-ic_keyboard_arrow_up_48px-dims" alt="ic_keyboard_arrow_up_48px"/>
-						
+						<img src="hardware.svg#keyboard_arrow_up" class="svg-ic_keyboard_arrow_up_48px-dims" alt="ic_keyboard_arrow_up_48px"/>
+
 					</div>
-					<h2>ic_keyboard_arrow_up_48px</h2>
+					<h2>keyboard_arrow_up</h2>
 				</li>
 				<li title="ic_keyboard_backspace_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_backspace_48px -->
-						<img src="hardware.svg#ic_keyboard_backspace_48px" class="svg-ic_keyboard_backspace_48px-dims" alt="ic_keyboard_backspace_48px"/>
-						
+						<img src="hardware.svg#keyboard_backspace" class="svg-ic_keyboard_backspace_48px-dims" alt="ic_keyboard_backspace_48px"/>
+
 					</div>
-					<h2>ic_keyboard_backspace_48px</h2>
+					<h2>keyboard_backspace</h2>
 				</li>
 				<li title="ic_keyboard_capslock_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_capslock_48px -->
-						<img src="hardware.svg#ic_keyboard_capslock_48px" class="svg-ic_keyboard_capslock_48px-dims" alt="ic_keyboard_capslock_48px"/>
-						
+						<img src="hardware.svg#keyboard_capslock" class="svg-ic_keyboard_capslock_48px-dims" alt="ic_keyboard_capslock_48px"/>
+
 					</div>
-					<h2>ic_keyboard_capslock_48px</h2>
+					<h2>keyboard_capslock</h2>
 				</li>
 				<li title="ic_keyboard_hide_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_hide_48px -->
-						<img src="hardware.svg#ic_keyboard_hide_48px" class="svg-ic_keyboard_hide_48px-dims" alt="ic_keyboard_hide_48px"/>
-						
+						<img src="hardware.svg#keyboard_hide" class="svg-ic_keyboard_hide_48px-dims" alt="ic_keyboard_hide_48px"/>
+
 					</div>
-					<h2>ic_keyboard_hide_48px</h2>
+					<h2>keyboard_hide</h2>
 				</li>
 				<li title="ic_keyboard_return_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_return_48px -->
-						<img src="hardware.svg#ic_keyboard_return_48px" class="svg-ic_keyboard_return_48px-dims" alt="ic_keyboard_return_48px"/>
-						
+						<img src="hardware.svg#keyboard_return" class="svg-ic_keyboard_return_48px-dims" alt="ic_keyboard_return_48px"/>
+
 					</div>
-					<h2>ic_keyboard_return_48px</h2>
+					<h2>keyboard_return</h2>
 				</li>
 				<li title="ic_keyboard_tab_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_tab_48px -->
-						<img src="hardware.svg#ic_keyboard_tab_48px" class="svg-ic_keyboard_tab_48px-dims" alt="ic_keyboard_tab_48px"/>
-						
+						<img src="hardware.svg#keyboard_tab" class="svg-ic_keyboard_tab_48px-dims" alt="ic_keyboard_tab_48px"/>
+
 					</div>
-					<h2>ic_keyboard_tab_48px</h2>
+					<h2>keyboard_tab</h2>
 				</li>
 				<li title="ic_keyboard_voice_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_keyboard_voice_48px -->
-						<img src="hardware.svg#ic_keyboard_voice_48px" class="svg-ic_keyboard_voice_48px-dims" alt="ic_keyboard_voice_48px"/>
-						
+						<img src="hardware.svg#keyboard_voice" class="svg-ic_keyboard_voice_48px-dims" alt="ic_keyboard_voice_48px"/>
+
 					</div>
-					<h2>ic_keyboard_voice_48px</h2>
+					<h2>keyboard_voice</h2>
 				</li>
 				<li title="ic_laptop_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_laptop_48px -->
-						<img src="hardware.svg#ic_laptop_48px" class="svg-ic_laptop_48px-dims" alt="ic_laptop_48px"/>
-						
+						<img src="hardware.svg#laptop" class="svg-ic_laptop_48px-dims" alt="ic_laptop_48px"/>
+
 					</div>
-					<h2>ic_laptop_48px</h2>
+					<h2>laptop</h2>
 				</li>
 				<li title="ic_laptop_chromebook_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_laptop_chromebook_48px -->
-						<img src="hardware.svg#ic_laptop_chromebook_48px" class="svg-ic_laptop_chromebook_48px-dims" alt="ic_laptop_chromebook_48px"/>
-						
+						<img src="hardware.svg#laptop_chromebook" class="svg-ic_laptop_chromebook_48px-dims" alt="ic_laptop_chromebook_48px"/>
+
 					</div>
-					<h2>ic_laptop_chromebook_48px</h2>
+					<h2>laptop_chromebook</h2>
 				</li>
 				<li title="ic_laptop_mac_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_laptop_mac_48px -->
-						<img src="hardware.svg#ic_laptop_mac_48px" class="svg-ic_laptop_mac_48px-dims" alt="ic_laptop_mac_48px"/>
-						
+						<img src="hardware.svg#laptop_mac" class="svg-ic_laptop_mac_48px-dims" alt="ic_laptop_mac_48px"/>
+
 					</div>
-					<h2>ic_laptop_mac_48px</h2>
+					<h2>laptop_mac</h2>
 				</li>
 				<li title="ic_laptop_windows_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_laptop_windows_48px -->
-						<img src="hardware.svg#ic_laptop_windows_48px" class="svg-ic_laptop_windows_48px-dims" alt="ic_laptop_windows_48px"/>
-						
+						<img src="hardware.svg#laptop_windows" class="svg-ic_laptop_windows_48px-dims" alt="ic_laptop_windows_48px"/>
+
 					</div>
-					<h2>ic_laptop_windows_48px</h2>
+					<h2>laptop_windows</h2>
 				</li>
 				<li title="ic_memory_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_memory_48px -->
-						<img src="hardware.svg#ic_memory_48px" class="svg-ic_memory_48px-dims" alt="ic_memory_48px"/>
-						
+						<img src="hardware.svg#memory" class="svg-ic_memory_48px-dims" alt="ic_memory_48px"/>
+
 					</div>
-					<h2>ic_memory_48px</h2>
+					<h2>memory</h2>
 				</li>
 				<li title="ic_mouse_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_mouse_48px -->
-						<img src="hardware.svg#ic_mouse_48px" class="svg-ic_mouse_48px-dims" alt="ic_mouse_48px"/>
-						
+						<img src="hardware.svg#mouse" class="svg-ic_mouse_48px-dims" alt="ic_mouse_48px"/>
+
 					</div>
-					<h2>ic_mouse_48px</h2>
+					<h2>mouse</h2>
 				</li>
 				<li title="ic_phone_android_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_android_48px -->
-						<img src="hardware.svg#ic_phone_android_48px" class="svg-ic_phone_android_48px-dims" alt="ic_phone_android_48px"/>
-						
+						<img src="hardware.svg#phone_android" class="svg-ic_phone_android_48px-dims" alt="ic_phone_android_48px"/>
+
 					</div>
-					<h2>ic_phone_android_48px</h2>
+					<h2>phone_android</h2>
 				</li>
 				<li title="ic_phone_iphone_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_iphone_48px -->
-						<img src="hardware.svg#ic_phone_iphone_48px" class="svg-ic_phone_iphone_48px-dims" alt="ic_phone_iphone_48px"/>
-						
+						<img src="hardware.svg#phone_iphone" class="svg-ic_phone_iphone_48px-dims" alt="ic_phone_iphone_48px"/>
+
 					</div>
-					<h2>ic_phone_iphone_48px</h2>
+					<h2>phone_iphone</h2>
 				</li>
 				<li title="ic_phonelink_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phonelink_48px -->
-						<img src="hardware.svg#ic_phonelink_48px" class="svg-ic_phonelink_48px-dims" alt="ic_phonelink_48px"/>
-						
+						<img src="hardware.svg#phonelink" class="svg-ic_phonelink_48px-dims" alt="ic_phonelink_48px"/>
+
 					</div>
-					<h2>ic_phonelink_48px</h2>
+					<h2>phonelink</h2>
 				</li>
 				<li title="ic_phonelink_off_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phonelink_off_48px -->
-						<img src="hardware.svg#ic_phonelink_off_48px" class="svg-ic_phonelink_off_48px-dims" alt="ic_phonelink_off_48px"/>
-						
+						<img src="hardware.svg#phonelink_off" class="svg-ic_phonelink_off_48px-dims" alt="ic_phonelink_off_48px"/>
+
 					</div>
-					<h2>ic_phonelink_off_48px</h2>
+					<h2>phonelink_off</h2>
 				</li>
 				<li title="ic_power_input_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_power_input_48px -->
-						<img src="hardware.svg#ic_power_input_48px" class="svg-ic_power_input_48px-dims" alt="ic_power_input_48px"/>
-						
+						<img src="hardware.svg#power_input" class="svg-ic_power_input_48px-dims" alt="ic_power_input_48px"/>
+
 					</div>
-					<h2>ic_power_input_48px</h2>
+					<h2>power_input</h2>
 				</li>
 				<li title="ic_router_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_router_48px -->
-						<img src="hardware.svg#ic_router_48px" class="svg-ic_router_48px-dims" alt="ic_router_48px"/>
-						
+						<img src="hardware.svg#router" class="svg-ic_router_48px-dims" alt="ic_router_48px"/>
+
 					</div>
-					<h2>ic_router_48px</h2>
+					<h2>router</h2>
 				</li>
 				<li title="ic_scanner_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_scanner_48px -->
-						<img src="hardware.svg#ic_scanner_48px" class="svg-ic_scanner_48px-dims" alt="ic_scanner_48px"/>
-						
+						<img src="hardware.svg#scanner" class="svg-ic_scanner_48px-dims" alt="ic_scanner_48px"/>
+
 					</div>
-					<h2>ic_scanner_48px</h2>
+					<h2>scanner</h2>
 				</li>
 				<li title="ic_security_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_security_48px -->
-						<img src="hardware.svg#ic_security_48px" class="svg-ic_security_48px-dims" alt="ic_security_48px"/>
-						
+						<img src="hardware.svg#security" class="svg-ic_security_48px-dims" alt="ic_security_48px"/>
+
 					</div>
-					<h2>ic_security_48px</h2>
+					<h2>security</h2>
 				</li>
 				<li title="ic_sim_card_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sim_card_48px -->
-						<img src="hardware.svg#ic_sim_card_48px" class="svg-ic_sim_card_48px-dims" alt="ic_sim_card_48px"/>
-						
+						<img src="hardware.svg#sim_card" class="svg-ic_sim_card_48px-dims" alt="ic_sim_card_48px"/>
+
 					</div>
-					<h2>ic_sim_card_48px</h2>
+					<h2>sim_card</h2>
 				</li>
 				<li title="ic_smartphone_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_smartphone_48px -->
-						<img src="hardware.svg#ic_smartphone_48px" class="svg-ic_smartphone_48px-dims" alt="ic_smartphone_48px"/>
-						
+						<img src="hardware.svg#smartphone" class="svg-ic_smartphone_48px-dims" alt="ic_smartphone_48px"/>
+
 					</div>
-					<h2>ic_smartphone_48px</h2>
+					<h2>smartphone</h2>
 				</li>
 				<li title="ic_speaker_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_speaker_48px -->
-						<img src="hardware.svg#ic_speaker_48px" class="svg-ic_speaker_48px-dims" alt="ic_speaker_48px"/>
-						
+						<img src="hardware.svg#speaker" class="svg-ic_speaker_48px-dims" alt="ic_speaker_48px"/>
+
 					</div>
-					<h2>ic_speaker_48px</h2>
+					<h2>speaker</h2>
 				</li>
 				<li title="ic_speaker_group_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_speaker_group_48px -->
-						<img src="hardware.svg#ic_speaker_group_48px" class="svg-ic_speaker_group_48px-dims" alt="ic_speaker_group_48px"/>
-						
+						<img src="hardware.svg#speaker_group" class="svg-ic_speaker_group_48px-dims" alt="ic_speaker_group_48px"/>
+
 					</div>
-					<h2>ic_speaker_group_48px</h2>
+					<h2>speaker_group</h2>
 				</li>
 				<li title="ic_tablet_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_tablet_48px -->
-						<img src="hardware.svg#ic_tablet_48px" class="svg-ic_tablet_48px-dims" alt="ic_tablet_48px"/>
-						
+						<img src="hardware.svg#tablet" class="svg-ic_tablet_48px-dims" alt="ic_tablet_48px"/>
+
 					</div>
-					<h2>ic_tablet_48px</h2>
+					<h2>tablet</h2>
 				</li>
 				<li title="ic_tablet_android_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_tablet_android_48px -->
-						<img src="hardware.svg#ic_tablet_android_48px" class="svg-ic_tablet_android_48px-dims" alt="ic_tablet_android_48px"/>
-						
+						<img src="hardware.svg#tablet_android" class="svg-ic_tablet_android_48px-dims" alt="ic_tablet_android_48px"/>
+
 					</div>
-					<h2>ic_tablet_android_48px</h2>
+					<h2>tablet_android</h2>
 				</li>
 				<li title="ic_tablet_mac_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_tablet_mac_48px -->
-						<img src="hardware.svg#ic_tablet_mac_48px" class="svg-ic_tablet_mac_48px-dims" alt="ic_tablet_mac_48px"/>
-						
+						<img src="hardware.svg#tablet_mac" class="svg-ic_tablet_mac_48px-dims" alt="ic_tablet_mac_48px"/>
+
 					</div>
-					<h2>ic_tablet_mac_48px</h2>
+					<h2>tablet_mac</h2>
 				</li>
 				<li title="ic_toys_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_toys_48px -->
-						<img src="hardware.svg#ic_toys_48px" class="svg-ic_toys_48px-dims" alt="ic_toys_48px"/>
-						
+						<img src="hardware.svg#toys" class="svg-ic_toys_48px-dims" alt="ic_toys_48px"/>
+
 					</div>
-					<h2>ic_toys_48px</h2>
+					<h2>toys</h2>
 				</li>
 				<li title="ic_tv_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_tv_48px -->
-						<img src="hardware.svg#ic_tv_48px" class="svg-ic_tv_48px-dims" alt="ic_tv_48px"/>
-						
+						<img src="hardware.svg#tv" class="svg-ic_tv_48px-dims" alt="ic_tv_48px"/>
+
 					</div>
-					<h2>ic_tv_48px</h2>
+					<h2>tv</h2>
 				</li>
 				<li title="ic_watch_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_watch_48px -->
-						<img src="hardware.svg#ic_watch_48px" class="svg-ic_watch_48px-dims" alt="ic_watch_48px"/>
-						
+						<img src="hardware.svg#watch" class="svg-ic_watch_48px-dims" alt="ic_watch_48px"/>
+
 					</div>
-					<h2>ic_watch_48px</h2>
+					<h2>watch</h2>
 				</li>
 			</ul>
 

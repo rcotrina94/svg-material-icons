@@ -5,9 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<title>SVG stack preview | svg-sprite</title>
 		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
-		
+
 <!--
-	
+
 Sprite shape dimensions
 ====================================================================================================
 You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
@@ -68,324 +68,324 @@ They might well be outsourced to an external stylesheet of course.
 			</ul>
 		</header>
 		<section>
-			
+
 <!--
-	
+
 SVG stack
 ====================================================================================================
 These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
 external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
-selector is used to show the very shape that is referenced by the fragment identifier.  
+selector is used to show the very shape that is referenced by the fragment identifier.
 
 -->
 
 			<ul>
-				
+
 				<li title="ic_add_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_add_48px -->
-						<img src="content.svg#ic_add_48px" class="svg-ic_add_48px-dims" alt="ic_add_48px"/>
-						
+						<img src="content.svg#add" class="svg-ic_add_48px-dims" alt="ic_add_48px"/>
+
 					</div>
-					<h2>ic_add_48px</h2>
+					<h2>add</h2>
 				</li>
 				<li title="ic_add_box_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_add_box_48px -->
-						<img src="content.svg#ic_add_box_48px" class="svg-ic_add_box_48px-dims" alt="ic_add_box_48px"/>
-						
+						<img src="content.svg#add_box" class="svg-ic_add_box_48px-dims" alt="ic_add_box_48px"/>
+
 					</div>
-					<h2>ic_add_box_48px</h2>
+					<h2>add_box</h2>
 				</li>
 				<li title="ic_add_circle_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_add_circle_48px -->
-						<img src="content.svg#ic_add_circle_48px" class="svg-ic_add_circle_48px-dims" alt="ic_add_circle_48px"/>
-						
+						<img src="content.svg#add_circle" class="svg-ic_add_circle_48px-dims" alt="ic_add_circle_48px"/>
+
 					</div>
-					<h2>ic_add_circle_48px</h2>
+					<h2>add_circle</h2>
 				</li>
 				<li title="ic_add_circle_outline_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_add_circle_outline_48px -->
-						<img src="content.svg#ic_add_circle_outline_48px" class="svg-ic_add_circle_outline_48px-dims" alt="ic_add_circle_outline_48px"/>
-						
+						<img src="content.svg#add_circle_outline" class="svg-ic_add_circle_outline_48px-dims" alt="ic_add_circle_outline_48px"/>
+
 					</div>
-					<h2>ic_add_circle_outline_48px</h2>
+					<h2>add_circle_outline</h2>
 				</li>
 				<li title="ic_archive_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_archive_48px -->
-						<img src="content.svg#ic_archive_48px" class="svg-ic_archive_48px-dims" alt="ic_archive_48px"/>
-						
+						<img src="content.svg#archive" class="svg-ic_archive_48px-dims" alt="ic_archive_48px"/>
+
 					</div>
-					<h2>ic_archive_48px</h2>
+					<h2>archive</h2>
 				</li>
 				<li title="ic_backspace_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_backspace_48px -->
-						<img src="content.svg#ic_backspace_48px" class="svg-ic_backspace_48px-dims" alt="ic_backspace_48px"/>
-						
+						<img src="content.svg#backspace" class="svg-ic_backspace_48px-dims" alt="ic_backspace_48px"/>
+
 					</div>
-					<h2>ic_backspace_48px</h2>
+					<h2>backspace</h2>
 				</li>
 				<li title="ic_block_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_block_48px -->
-						<img src="content.svg#ic_block_48px" class="svg-ic_block_48px-dims" alt="ic_block_48px"/>
-						
+						<img src="content.svg#block" class="svg-ic_block_48px-dims" alt="ic_block_48px"/>
+
 					</div>
-					<h2>ic_block_48px</h2>
+					<h2>block</h2>
 				</li>
 				<li title="ic_clear_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_clear_48px -->
-						<img src="content.svg#ic_clear_48px" class="svg-ic_clear_48px-dims" alt="ic_clear_48px"/>
-						
+						<img src="content.svg#clear" class="svg-ic_clear_48px-dims" alt="ic_clear_48px"/>
+
 					</div>
-					<h2>ic_clear_48px</h2>
+					<h2>clear</h2>
 				</li>
 				<li title="ic_content_copy_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_content_copy_48px -->
-						<img src="content.svg#ic_content_copy_48px" class="svg-ic_content_copy_48px-dims" alt="ic_content_copy_48px"/>
-						
+						<img src="content.svg#content_copy" class="svg-ic_content_copy_48px-dims" alt="ic_content_copy_48px"/>
+
 					</div>
-					<h2>ic_content_copy_48px</h2>
+					<h2>content_copy</h2>
 				</li>
 				<li title="ic_content_cut_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_content_cut_48px -->
-						<img src="content.svg#ic_content_cut_48px" class="svg-ic_content_cut_48px-dims" alt="ic_content_cut_48px"/>
-						
+						<img src="content.svg#content_cut" class="svg-ic_content_cut_48px-dims" alt="ic_content_cut_48px"/>
+
 					</div>
-					<h2>ic_content_cut_48px</h2>
+					<h2>content_cut</h2>
 				</li>
 				<li title="ic_content_paste_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_content_paste_48px -->
-						<img src="content.svg#ic_content_paste_48px" class="svg-ic_content_paste_48px-dims" alt="ic_content_paste_48px"/>
-						
+						<img src="content.svg#content_paste" class="svg-ic_content_paste_48px-dims" alt="ic_content_paste_48px"/>
+
 					</div>
-					<h2>ic_content_paste_48px</h2>
+					<h2>content_paste</h2>
 				</li>
 				<li title="ic_create_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_create_48px -->
-						<img src="content.svg#ic_create_48px" class="svg-ic_create_48px-dims" alt="ic_create_48px"/>
-						
+						<img src="content.svg#create" class="svg-ic_create_48px-dims" alt="ic_create_48px"/>
+
 					</div>
-					<h2>ic_create_48px</h2>
+					<h2>create</h2>
 				</li>
 				<li title="ic_drafts_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_drafts_48px -->
-						<img src="content.svg#ic_drafts_48px" class="svg-ic_drafts_48px-dims" alt="ic_drafts_48px"/>
-						
+						<img src="content.svg#drafts" class="svg-ic_drafts_48px-dims" alt="ic_drafts_48px"/>
+
 					</div>
-					<h2>ic_drafts_48px</h2>
+					<h2>drafts</h2>
 				</li>
 				<li title="ic_filter_list_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_filter_list_48px -->
-						<img src="content.svg#ic_filter_list_48px" class="svg-ic_filter_list_48px-dims" alt="ic_filter_list_48px"/>
-						
+						<img src="content.svg#filter_list" class="svg-ic_filter_list_48px-dims" alt="ic_filter_list_48px"/>
+
 					</div>
-					<h2>ic_filter_list_48px</h2>
+					<h2>filter_list</h2>
 				</li>
 				<li title="ic_flag_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_flag_48px -->
-						<img src="content.svg#ic_flag_48px" class="svg-ic_flag_48px-dims" alt="ic_flag_48px"/>
-						
+						<img src="content.svg#flag" class="svg-ic_flag_48px-dims" alt="ic_flag_48px"/>
+
 					</div>
-					<h2>ic_flag_48px</h2>
+					<h2>flag</h2>
 				</li>
 				<li title="ic_forward_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_forward_48px -->
-						<img src="content.svg#ic_forward_48px" class="svg-ic_forward_48px-dims" alt="ic_forward_48px"/>
-						
+						<img src="content.svg#forward" class="svg-ic_forward_48px-dims" alt="ic_forward_48px"/>
+
 					</div>
-					<h2>ic_forward_48px</h2>
+					<h2>forward</h2>
 				</li>
 				<li title="ic_gesture_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_gesture_48px -->
-						<img src="content.svg#ic_gesture_48px" class="svg-ic_gesture_48px-dims" alt="ic_gesture_48px"/>
-						
+						<img src="content.svg#gesture" class="svg-ic_gesture_48px-dims" alt="ic_gesture_48px"/>
+
 					</div>
-					<h2>ic_gesture_48px</h2>
+					<h2>gesture</h2>
 				</li>
 				<li title="ic_inbox_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_inbox_48px -->
-						<img src="content.svg#ic_inbox_48px" class="svg-ic_inbox_48px-dims" alt="ic_inbox_48px"/>
-						
+						<img src="content.svg#inbox" class="svg-ic_inbox_48px-dims" alt="ic_inbox_48px"/>
+
 					</div>
-					<h2>ic_inbox_48px</h2>
+					<h2>inbox</h2>
 				</li>
 				<li title="ic_link_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_link_48px -->
-						<img src="content.svg#ic_link_48px" class="svg-ic_link_48px-dims" alt="ic_link_48px"/>
-						
+						<img src="content.svg#link" class="svg-ic_link_48px-dims" alt="ic_link_48px"/>
+
 					</div>
-					<h2>ic_link_48px</h2>
+					<h2>link</h2>
 				</li>
 				<li title="ic_mail_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_mail_48px -->
-						<img src="content.svg#ic_mail_48px" class="svg-ic_mail_48px-dims" alt="ic_mail_48px"/>
-						
+						<img src="content.svg#mail" class="svg-ic_mail_48px-dims" alt="ic_mail_48px"/>
+
 					</div>
-					<h2>ic_mail_48px</h2>
+					<h2>mail</h2>
 				</li>
 				<li title="ic_markunread_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_markunread_48px -->
-						<img src="content.svg#ic_markunread_48px" class="svg-ic_markunread_48px-dims" alt="ic_markunread_48px"/>
-						
+						<img src="content.svg#markunread" class="svg-ic_markunread_48px-dims" alt="ic_markunread_48px"/>
+
 					</div>
-					<h2>ic_markunread_48px</h2>
+					<h2>markunread</h2>
 				</li>
 				<li title="ic_redo_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_redo_48px -->
-						<img src="content.svg#ic_redo_48px" class="svg-ic_redo_48px-dims" alt="ic_redo_48px"/>
-						
+						<img src="content.svg#redo" class="svg-ic_redo_48px-dims" alt="ic_redo_48px"/>
+
 					</div>
-					<h2>ic_redo_48px</h2>
+					<h2>redo</h2>
 				</li>
 				<li title="ic_remove_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_remove_48px -->
-						<img src="content.svg#ic_remove_48px" class="svg-ic_remove_48px-dims" alt="ic_remove_48px"/>
-						
+						<img src="content.svg#remove" class="svg-ic_remove_48px-dims" alt="ic_remove_48px"/>
+
 					</div>
-					<h2>ic_remove_48px</h2>
+					<h2>remove</h2>
 				</li>
 				<li title="ic_remove_circle_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_remove_circle_48px -->
-						<img src="content.svg#ic_remove_circle_48px" class="svg-ic_remove_circle_48px-dims" alt="ic_remove_circle_48px"/>
-						
+						<img src="content.svg#remove_circle" class="svg-ic_remove_circle_48px-dims" alt="ic_remove_circle_48px"/>
+
 					</div>
-					<h2>ic_remove_circle_48px</h2>
+					<h2>remove_circle</h2>
 				</li>
 				<li title="ic_remove_circle_outline_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_remove_circle_outline_48px -->
-						<img src="content.svg#ic_remove_circle_outline_48px" class="svg-ic_remove_circle_outline_48px-dims" alt="ic_remove_circle_outline_48px"/>
-						
+						<img src="content.svg#remove_circle_outline" class="svg-ic_remove_circle_outline_48px-dims" alt="ic_remove_circle_outline_48px"/>
+
 					</div>
-					<h2>ic_remove_circle_outline_48px</h2>
+					<h2>remove_circle_outline</h2>
 				</li>
 				<li title="ic_reply_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_reply_48px -->
-						<img src="content.svg#ic_reply_48px" class="svg-ic_reply_48px-dims" alt="ic_reply_48px"/>
-						
+						<img src="content.svg#reply" class="svg-ic_reply_48px-dims" alt="ic_reply_48px"/>
+
 					</div>
-					<h2>ic_reply_48px</h2>
+					<h2>reply</h2>
 				</li>
 				<li title="ic_reply_all_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_reply_all_48px -->
-						<img src="content.svg#ic_reply_all_48px" class="svg-ic_reply_all_48px-dims" alt="ic_reply_all_48px"/>
-						
+						<img src="content.svg#reply_all" class="svg-ic_reply_all_48px-dims" alt="ic_reply_all_48px"/>
+
 					</div>
-					<h2>ic_reply_all_48px</h2>
+					<h2>reply_all</h2>
 				</li>
 				<li title="ic_report_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_report_48px -->
-						<img src="content.svg#ic_report_48px" class="svg-ic_report_48px-dims" alt="ic_report_48px"/>
-						
+						<img src="content.svg#report" class="svg-ic_report_48px-dims" alt="ic_report_48px"/>
+
 					</div>
-					<h2>ic_report_48px</h2>
+					<h2>report</h2>
 				</li>
 				<li title="ic_save_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_save_48px -->
-						<img src="content.svg#ic_save_48px" class="svg-ic_save_48px-dims" alt="ic_save_48px"/>
-						
+						<img src="content.svg#save" class="svg-ic_save_48px-dims" alt="ic_save_48px"/>
+
 					</div>
-					<h2>ic_save_48px</h2>
+					<h2>save</h2>
 				</li>
 				<li title="ic_select_all_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_select_all_48px -->
-						<img src="content.svg#ic_select_all_48px" class="svg-ic_select_all_48px-dims" alt="ic_select_all_48px"/>
-						
+						<img src="content.svg#select_all" class="svg-ic_select_all_48px-dims" alt="ic_select_all_48px"/>
+
 					</div>
-					<h2>ic_select_all_48px</h2>
+					<h2>select_all</h2>
 				</li>
 				<li title="ic_send_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_send_48px -->
-						<img src="content.svg#ic_send_48px" class="svg-ic_send_48px-dims" alt="ic_send_48px"/>
-						
+						<img src="content.svg#send" class="svg-ic_send_48px-dims" alt="ic_send_48px"/>
+
 					</div>
-					<h2>ic_send_48px</h2>
+					<h2>send</h2>
 				</li>
 				<li title="ic_sort_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sort_48px -->
-						<img src="content.svg#ic_sort_48px" class="svg-ic_sort_48px-dims" alt="ic_sort_48px"/>
-						
+						<img src="content.svg#sort" class="svg-ic_sort_48px-dims" alt="ic_sort_48px"/>
+
 					</div>
-					<h2>ic_sort_48px</h2>
+					<h2>sort</h2>
 				</li>
 				<li title="ic_text_format_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_text_format_48px -->
-						<img src="content.svg#ic_text_format_48px" class="svg-ic_text_format_48px-dims" alt="ic_text_format_48px"/>
-						
+						<img src="content.svg#text_format" class="svg-ic_text_format_48px-dims" alt="ic_text_format_48px"/>
+
 					</div>
-					<h2>ic_text_format_48px</h2>
+					<h2>text_format</h2>
 				</li>
 				<li title="ic_undo_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_undo_48px -->
-						<img src="content.svg#ic_undo_48px" class="svg-ic_undo_48px-dims" alt="ic_undo_48px"/>
-						
+						<img src="content.svg#undo" class="svg-ic_undo_48px-dims" alt="ic_undo_48px"/>
+
 					</div>
-					<h2>ic_undo_48px</h2>
+					<h2>undo</h2>
 				</li>
 			</ul>
 

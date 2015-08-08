@@ -5,9 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<title>SVG stack preview | svg-sprite</title>
 		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
-		
+
 <!--
-	
+
 Sprite shape dimensions
 ====================================================================================================
 You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
@@ -81,441 +81,441 @@ They might well be outsourced to an external stylesheet of course.
 			</ul>
 		</header>
 		<section>
-			
+
 <!--
-	
+
 SVG stack
 ====================================================================================================
 These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
 external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
-selector is used to show the very shape that is referenced by the fragment identifier.  
+selector is used to show the very shape that is referenced by the fragment identifier.
 
 -->
 
 			<ul>
-				
+
 				<li title="ic_adb_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_adb_48px -->
-						<img src="notification.svg#ic_adb_48px" class="svg-ic_adb_48px-dims" alt="ic_adb_48px"/>
-						
+						<img src="notification.svg#adb" class="svg-ic_adb_48px-dims" alt="ic_adb_48px"/>
+
 					</div>
-					<h2>ic_adb_48px</h2>
+					<h2>adb</h2>
 				</li>
 				<li title="ic_airline_seat_flat_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_flat_48px -->
-						<img src="notification.svg#ic_airline_seat_flat_48px" class="svg-ic_airline_seat_flat_48px-dims" alt="ic_airline_seat_flat_48px"/>
-						
+						<img src="notification.svg#airline_seat_flat" class="svg-ic_airline_seat_flat_48px-dims" alt="ic_airline_seat_flat_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_flat_48px</h2>
+					<h2>airline_seat_flat</h2>
 				</li>
 				<li title="ic_airline_seat_flat_angled_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_flat_angled_48px -->
-						<img src="notification.svg#ic_airline_seat_flat_angled_48px" class="svg-ic_airline_seat_flat_angled_48px-dims" alt="ic_airline_seat_flat_angled_48px"/>
-						
+						<img src="notification.svg#airline_seat_flat_angled" class="svg-ic_airline_seat_flat_angled_48px-dims" alt="ic_airline_seat_flat_angled_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_flat_angled_48px</h2>
+					<h2>airline_seat_flat_angled</h2>
 				</li>
 				<li title="ic_airline_seat_individual_suite_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_individual_suite_48px -->
-						<img src="notification.svg#ic_airline_seat_individual_suite_48px" class="svg-ic_airline_seat_individual_suite_48px-dims" alt="ic_airline_seat_individual_suite_48px"/>
-						
+						<img src="notification.svg#airline_seat_individual_suite" class="svg-ic_airline_seat_individual_suite_48px-dims" alt="ic_airline_seat_individual_suite_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_individual_suite_48px</h2>
+					<h2>airline_seat_individual_suite</h2>
 				</li>
 				<li title="ic_airline_seat_legroom_extra_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_legroom_extra_48px -->
-						<img src="notification.svg#ic_airline_seat_legroom_extra_48px" class="svg-ic_airline_seat_legroom_extra_48px-dims" alt="ic_airline_seat_legroom_extra_48px"/>
-						
+						<img src="notification.svg#airline_seat_legroom_extra" class="svg-ic_airline_seat_legroom_extra_48px-dims" alt="ic_airline_seat_legroom_extra_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_legroom_extra_48px</h2>
+					<h2>airline_seat_legroom_extra</h2>
 				</li>
 				<li title="ic_airline_seat_legroom_normal_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_legroom_normal_48px -->
-						<img src="notification.svg#ic_airline_seat_legroom_normal_48px" class="svg-ic_airline_seat_legroom_normal_48px-dims" alt="ic_airline_seat_legroom_normal_48px"/>
-						
+						<img src="notification.svg#airline_seat_legroom_normal" class="svg-ic_airline_seat_legroom_normal_48px-dims" alt="ic_airline_seat_legroom_normal_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_legroom_normal_48px</h2>
+					<h2>airline_seat_legroom_normal</h2>
 				</li>
 				<li title="ic_airline_seat_legroom_reduced_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_legroom_reduced_48px -->
-						<img src="notification.svg#ic_airline_seat_legroom_reduced_48px" class="svg-ic_airline_seat_legroom_reduced_48px-dims" alt="ic_airline_seat_legroom_reduced_48px"/>
-						
+						<img src="notification.svg#airline_seat_legroom_reduced" class="svg-ic_airline_seat_legroom_reduced_48px-dims" alt="ic_airline_seat_legroom_reduced_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_legroom_reduced_48px</h2>
+					<h2>airline_seat_legroom_reduced</h2>
 				</li>
 				<li title="ic_airline_seat_recline_extra_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_recline_extra_48px -->
-						<img src="notification.svg#ic_airline_seat_recline_extra_48px" class="svg-ic_airline_seat_recline_extra_48px-dims" alt="ic_airline_seat_recline_extra_48px"/>
-						
+						<img src="notification.svg#airline_seat_recline_extra" class="svg-ic_airline_seat_recline_extra_48px-dims" alt="ic_airline_seat_recline_extra_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_recline_extra_48px</h2>
+					<h2>airline_seat_recline_extra</h2>
 				</li>
 				<li title="ic_airline_seat_recline_normal_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_airline_seat_recline_normal_48px -->
-						<img src="notification.svg#ic_airline_seat_recline_normal_48px" class="svg-ic_airline_seat_recline_normal_48px-dims" alt="ic_airline_seat_recline_normal_48px"/>
-						
+						<img src="notification.svg#airline_seat_recline_normal" class="svg-ic_airline_seat_recline_normal_48px-dims" alt="ic_airline_seat_recline_normal_48px"/>
+
 					</div>
-					<h2>ic_airline_seat_recline_normal_48px</h2>
+					<h2>airline_seat_recline_normal</h2>
 				</li>
 				<li title="ic_bluetooth_audio_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_bluetooth_audio_48px -->
-						<img src="notification.svg#ic_bluetooth_audio_48px" class="svg-ic_bluetooth_audio_48px-dims" alt="ic_bluetooth_audio_48px"/>
-						
+						<img src="notification.svg#bluetooth_audio" class="svg-ic_bluetooth_audio_48px-dims" alt="ic_bluetooth_audio_48px"/>
+
 					</div>
-					<h2>ic_bluetooth_audio_48px</h2>
+					<h2>bluetooth_audio</h2>
 				</li>
 				<li title="ic_confirmation_number_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_confirmation_number_48px -->
-						<img src="notification.svg#ic_confirmation_number_48px" class="svg-ic_confirmation_number_48px-dims" alt="ic_confirmation_number_48px"/>
-						
+						<img src="notification.svg#confirmation_number" class="svg-ic_confirmation_number_48px-dims" alt="ic_confirmation_number_48px"/>
+
 					</div>
-					<h2>ic_confirmation_number_48px</h2>
+					<h2>confirmation_number</h2>
 				</li>
 				<li title="ic_disc_full_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_disc_full_48px -->
-						<img src="notification.svg#ic_disc_full_48px" class="svg-ic_disc_full_48px-dims" alt="ic_disc_full_48px"/>
-						
+						<img src="notification.svg#disc_full" class="svg-ic_disc_full_48px-dims" alt="ic_disc_full_48px"/>
+
 					</div>
-					<h2>ic_disc_full_48px</h2>
+					<h2>disc_full</h2>
 				</li>
 				<li title="ic_do_not_disturb_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_do_not_disturb_48px -->
-						<img src="notification.svg#ic_do_not_disturb_48px" class="svg-ic_do_not_disturb_48px-dims" alt="ic_do_not_disturb_48px"/>
-						
+						<img src="notification.svg#do_not_disturb" class="svg-ic_do_not_disturb_48px-dims" alt="ic_do_not_disturb_48px"/>
+
 					</div>
-					<h2>ic_do_not_disturb_48px</h2>
+					<h2>do_not_disturb</h2>
 				</li>
 				<li title="ic_do_not_disturb_alt_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_do_not_disturb_alt_48px -->
-						<img src="notification.svg#ic_do_not_disturb_alt_48px" class="svg-ic_do_not_disturb_alt_48px-dims" alt="ic_do_not_disturb_alt_48px"/>
-						
+						<img src="notification.svg#do_not_disturb_alt" class="svg-ic_do_not_disturb_alt_48px-dims" alt="ic_do_not_disturb_alt_48px"/>
+
 					</div>
-					<h2>ic_do_not_disturb_alt_48px</h2>
+					<h2>do_not_disturb_alt</h2>
 				</li>
 				<li title="ic_drive_eta_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_drive_eta_48px -->
-						<img src="notification.svg#ic_drive_eta_48px" class="svg-ic_drive_eta_48px-dims" alt="ic_drive_eta_48px"/>
-						
+						<img src="notification.svg#drive_eta" class="svg-ic_drive_eta_48px-dims" alt="ic_drive_eta_48px"/>
+
 					</div>
-					<h2>ic_drive_eta_48px</h2>
+					<h2>drive_eta</h2>
 				</li>
 				<li title="ic_event_available_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_event_available_48px -->
-						<img src="notification.svg#ic_event_available_48px" class="svg-ic_event_available_48px-dims" alt="ic_event_available_48px"/>
-						
+						<img src="notification.svg#event_available" class="svg-ic_event_available_48px-dims" alt="ic_event_available_48px"/>
+
 					</div>
-					<h2>ic_event_available_48px</h2>
+					<h2>event_available</h2>
 				</li>
 				<li title="ic_event_busy_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_event_busy_48px -->
-						<img src="notification.svg#ic_event_busy_48px" class="svg-ic_event_busy_48px-dims" alt="ic_event_busy_48px"/>
-						
+						<img src="notification.svg#event_busy" class="svg-ic_event_busy_48px-dims" alt="ic_event_busy_48px"/>
+
 					</div>
-					<h2>ic_event_busy_48px</h2>
+					<h2>event_busy</h2>
 				</li>
 				<li title="ic_event_note_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_event_note_48px -->
-						<img src="notification.svg#ic_event_note_48px" class="svg-ic_event_note_48px-dims" alt="ic_event_note_48px"/>
-						
+						<img src="notification.svg#event_note" class="svg-ic_event_note_48px-dims" alt="ic_event_note_48px"/>
+
 					</div>
-					<h2>ic_event_note_48px</h2>
+					<h2>event_note</h2>
 				</li>
 				<li title="ic_folder_special_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_folder_special_48px -->
-						<img src="notification.svg#ic_folder_special_48px" class="svg-ic_folder_special_48px-dims" alt="ic_folder_special_48px"/>
-						
+						<img src="notification.svg#folder_special" class="svg-ic_folder_special_48px-dims" alt="ic_folder_special_48px"/>
+
 					</div>
-					<h2>ic_folder_special_48px</h2>
+					<h2>folder_special</h2>
 				</li>
 				<li title="ic_live_tv_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_live_tv_48px -->
-						<img src="notification.svg#ic_live_tv_48px" class="svg-ic_live_tv_48px-dims" alt="ic_live_tv_48px"/>
-						
+						<img src="notification.svg#live_tv" class="svg-ic_live_tv_48px-dims" alt="ic_live_tv_48px"/>
+
 					</div>
-					<h2>ic_live_tv_48px</h2>
+					<h2>live_tv</h2>
 				</li>
 				<li title="ic_mms_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_mms_48px -->
-						<img src="notification.svg#ic_mms_48px" class="svg-ic_mms_48px-dims" alt="ic_mms_48px"/>
-						
+						<img src="notification.svg#mms" class="svg-ic_mms_48px-dims" alt="ic_mms_48px"/>
+
 					</div>
-					<h2>ic_mms_48px</h2>
+					<h2>mms</h2>
 				</li>
 				<li title="ic_more_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_more_48px -->
-						<img src="notification.svg#ic_more_48px" class="svg-ic_more_48px-dims" alt="ic_more_48px"/>
-						
+						<img src="notification.svg#more" class="svg-ic_more_48px-dims" alt="ic_more_48px"/>
+
 					</div>
-					<h2>ic_more_48px</h2>
+					<h2>more</h2>
 				</li>
 				<li title="ic_network_locked_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_network_locked_48px -->
-						<img src="notification.svg#ic_network_locked_48px" class="svg-ic_network_locked_48px-dims" alt="ic_network_locked_48px"/>
-						
+						<img src="notification.svg#network_locked" class="svg-ic_network_locked_48px-dims" alt="ic_network_locked_48px"/>
+
 					</div>
-					<h2>ic_network_locked_48px</h2>
+					<h2>network_locked</h2>
 				</li>
 				<li title="ic_ondemand_video_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_ondemand_video_48px -->
-						<img src="notification.svg#ic_ondemand_video_48px" class="svg-ic_ondemand_video_48px-dims" alt="ic_ondemand_video_48px"/>
-						
+						<img src="notification.svg#ondemand_video" class="svg-ic_ondemand_video_48px-dims" alt="ic_ondemand_video_48px"/>
+
 					</div>
-					<h2>ic_ondemand_video_48px</h2>
+					<h2>ondemand_video</h2>
 				</li>
 				<li title="ic_personal_video_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_personal_video_48px -->
-						<img src="notification.svg#ic_personal_video_48px" class="svg-ic_personal_video_48px-dims" alt="ic_personal_video_48px"/>
-						
+						<img src="notification.svg#personal_video" class="svg-ic_personal_video_48px-dims" alt="ic_personal_video_48px"/>
+
 					</div>
-					<h2>ic_personal_video_48px</h2>
+					<h2>personal_video</h2>
 				</li>
 				<li title="ic_phone_bluetooth_speaker_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_bluetooth_speaker_48px -->
-						<img src="notification.svg#ic_phone_bluetooth_speaker_48px" class="svg-ic_phone_bluetooth_speaker_48px-dims" alt="ic_phone_bluetooth_speaker_48px"/>
-						
+						<img src="notification.svg#phone_bluetooth_speaker" class="svg-ic_phone_bluetooth_speaker_48px-dims" alt="ic_phone_bluetooth_speaker_48px"/>
+
 					</div>
-					<h2>ic_phone_bluetooth_speaker_48px</h2>
+					<h2>phone_bluetooth_speaker</h2>
 				</li>
 				<li title="ic_phone_forwarded_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_forwarded_48px -->
-						<img src="notification.svg#ic_phone_forwarded_48px" class="svg-ic_phone_forwarded_48px-dims" alt="ic_phone_forwarded_48px"/>
-						
+						<img src="notification.svg#phone_forwarded" class="svg-ic_phone_forwarded_48px-dims" alt="ic_phone_forwarded_48px"/>
+
 					</div>
-					<h2>ic_phone_forwarded_48px</h2>
+					<h2>phone_forwarded</h2>
 				</li>
 				<li title="ic_phone_in_talk_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_in_talk_48px -->
-						<img src="notification.svg#ic_phone_in_talk_48px" class="svg-ic_phone_in_talk_48px-dims" alt="ic_phone_in_talk_48px"/>
-						
+						<img src="notification.svg#phone_in_talk" class="svg-ic_phone_in_talk_48px-dims" alt="ic_phone_in_talk_48px"/>
+
 					</div>
-					<h2>ic_phone_in_talk_48px</h2>
+					<h2>phone_in_talk</h2>
 				</li>
 				<li title="ic_phone_locked_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_locked_48px -->
-						<img src="notification.svg#ic_phone_locked_48px" class="svg-ic_phone_locked_48px-dims" alt="ic_phone_locked_48px"/>
-						
+						<img src="notification.svg#phone_locked" class="svg-ic_phone_locked_48px-dims" alt="ic_phone_locked_48px"/>
+
 					</div>
-					<h2>ic_phone_locked_48px</h2>
+					<h2>phone_locked</h2>
 				</li>
 				<li title="ic_phone_missed_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_missed_48px -->
-						<img src="notification.svg#ic_phone_missed_48px" class="svg-ic_phone_missed_48px-dims" alt="ic_phone_missed_48px"/>
-						
+						<img src="notification.svg#phone_missed" class="svg-ic_phone_missed_48px-dims" alt="ic_phone_missed_48px"/>
+
 					</div>
-					<h2>ic_phone_missed_48px</h2>
+					<h2>phone_missed</h2>
 				</li>
 				<li title="ic_phone_paused_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_phone_paused_48px -->
-						<img src="notification.svg#ic_phone_paused_48px" class="svg-ic_phone_paused_48px-dims" alt="ic_phone_paused_48px"/>
-						
+						<img src="notification.svg#phone_paused" class="svg-ic_phone_paused_48px-dims" alt="ic_phone_paused_48px"/>
+
 					</div>
-					<h2>ic_phone_paused_48px</h2>
+					<h2>phone_paused</h2>
 				</li>
 				<li title="ic_power_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_power_48px -->
-						<img src="notification.svg#ic_power_48px" class="svg-ic_power_48px-dims" alt="ic_power_48px"/>
-						
+						<img src="notification.svg#power" class="svg-ic_power_48px-dims" alt="ic_power_48px"/>
+
 					</div>
-					<h2>ic_power_48px</h2>
+					<h2>power</h2>
 				</li>
 				<li title="ic_sd_card_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sd_card_48px -->
-						<img src="notification.svg#ic_sd_card_48px" class="svg-ic_sd_card_48px-dims" alt="ic_sd_card_48px"/>
-						
+						<img src="notification.svg#sd_card" class="svg-ic_sd_card_48px-dims" alt="ic_sd_card_48px"/>
+
 					</div>
-					<h2>ic_sd_card_48px</h2>
+					<h2>sd_card</h2>
 				</li>
 				<li title="ic_sim_card_alert_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sim_card_alert_48px -->
-						<img src="notification.svg#ic_sim_card_alert_48px" class="svg-ic_sim_card_alert_48px-dims" alt="ic_sim_card_alert_48px"/>
-						
+						<img src="notification.svg#sim_card_alert" class="svg-ic_sim_card_alert_48px-dims" alt="ic_sim_card_alert_48px"/>
+
 					</div>
-					<h2>ic_sim_card_alert_48px</h2>
+					<h2>sim_card_alert</h2>
 				</li>
 				<li title="ic_sms_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sms_48px -->
-						<img src="notification.svg#ic_sms_48px" class="svg-ic_sms_48px-dims" alt="ic_sms_48px"/>
-						
+						<img src="notification.svg#sms" class="svg-ic_sms_48px-dims" alt="ic_sms_48px"/>
+
 					</div>
-					<h2>ic_sms_48px</h2>
+					<h2>sms</h2>
 				</li>
 				<li title="ic_sms_failed_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sms_failed_48px -->
-						<img src="notification.svg#ic_sms_failed_48px" class="svg-ic_sms_failed_48px-dims" alt="ic_sms_failed_48px"/>
-						
+						<img src="notification.svg#sms_failed" class="svg-ic_sms_failed_48px-dims" alt="ic_sms_failed_48px"/>
+
 					</div>
-					<h2>ic_sms_failed_48px</h2>
+					<h2>sms_failed</h2>
 				</li>
 				<li title="ic_sync_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sync_48px -->
-						<img src="notification.svg#ic_sync_48px" class="svg-ic_sync_48px-dims" alt="ic_sync_48px"/>
-						
+						<img src="notification.svg#sync" class="svg-ic_sync_48px-dims" alt="ic_sync_48px"/>
+
 					</div>
-					<h2>ic_sync_48px</h2>
+					<h2>sync</h2>
 				</li>
 				<li title="ic_sync_disabled_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sync_disabled_48px -->
-						<img src="notification.svg#ic_sync_disabled_48px" class="svg-ic_sync_disabled_48px-dims" alt="ic_sync_disabled_48px"/>
-						
+						<img src="notification.svg#sync_disabled" class="svg-ic_sync_disabled_48px-dims" alt="ic_sync_disabled_48px"/>
+
 					</div>
-					<h2>ic_sync_disabled_48px</h2>
+					<h2>sync_disabled</h2>
 				</li>
 				<li title="ic_sync_problem_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_sync_problem_48px -->
-						<img src="notification.svg#ic_sync_problem_48px" class="svg-ic_sync_problem_48px-dims" alt="ic_sync_problem_48px"/>
-						
+						<img src="notification.svg#sync_problem" class="svg-ic_sync_problem_48px-dims" alt="ic_sync_problem_48px"/>
+
 					</div>
-					<h2>ic_sync_problem_48px</h2>
+					<h2>sync_problem</h2>
 				</li>
 				<li title="ic_system_update_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_system_update_48px -->
-						<img src="notification.svg#ic_system_update_48px" class="svg-ic_system_update_48px-dims" alt="ic_system_update_48px"/>
-						
+						<img src="notification.svg#system_update" class="svg-ic_system_update_48px-dims" alt="ic_system_update_48px"/>
+
 					</div>
-					<h2>ic_system_update_48px</h2>
+					<h2>system_update</h2>
 				</li>
 				<li title="ic_tap_and_play_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_tap_and_play_48px -->
-						<img src="notification.svg#ic_tap_and_play_48px" class="svg-ic_tap_and_play_48px-dims" alt="ic_tap_and_play_48px"/>
-						
+						<img src="notification.svg#tap_and_play" class="svg-ic_tap_and_play_48px-dims" alt="ic_tap_and_play_48px"/>
+
 					</div>
-					<h2>ic_tap_and_play_48px</h2>
+					<h2>tap_and_play</h2>
 				</li>
 				<li title="ic_time_to_leave_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_time_to_leave_48px -->
-						<img src="notification.svg#ic_time_to_leave_48px" class="svg-ic_time_to_leave_48px-dims" alt="ic_time_to_leave_48px"/>
-						
+						<img src="notification.svg#time_to_leave" class="svg-ic_time_to_leave_48px-dims" alt="ic_time_to_leave_48px"/>
+
 					</div>
-					<h2>ic_time_to_leave_48px</h2>
+					<h2>time_to_leave</h2>
 				</li>
 				<li title="ic_vibration_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_vibration_48px -->
-						<img src="notification.svg#ic_vibration_48px" class="svg-ic_vibration_48px-dims" alt="ic_vibration_48px"/>
-						
+						<img src="notification.svg#vibration" class="svg-ic_vibration_48px-dims" alt="ic_vibration_48px"/>
+
 					</div>
-					<h2>ic_vibration_48px</h2>
+					<h2>vibration</h2>
 				</li>
 				<li title="ic_voice_chat_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_voice_chat_48px -->
-						<img src="notification.svg#ic_voice_chat_48px" class="svg-ic_voice_chat_48px-dims" alt="ic_voice_chat_48px"/>
-						
+						<img src="notification.svg#voice_chat" class="svg-ic_voice_chat_48px-dims" alt="ic_voice_chat_48px"/>
+
 					</div>
-					<h2>ic_voice_chat_48px</h2>
+					<h2>voice_chat</h2>
 				</li>
 				<li title="ic_vpn_lock_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_vpn_lock_48px -->
-						<img src="notification.svg#ic_vpn_lock_48px" class="svg-ic_vpn_lock_48px-dims" alt="ic_vpn_lock_48px"/>
-						
+						<img src="notification.svg#vpn_lock" class="svg-ic_vpn_lock_48px-dims" alt="ic_vpn_lock_48px"/>
+
 					</div>
-					<h2>ic_vpn_lock_48px</h2>
+					<h2>vpn_lock</h2>
 				</li>
 				<li title="ic_wc_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_wc_48px -->
-						<img src="notification.svg#ic_wc_48px" class="svg-ic_wc_48px-dims" alt="ic_wc_48px"/>
-						
+						<img src="notification.svg#wc" class="svg-ic_wc_48px-dims" alt="ic_wc_48px"/>
+
 					</div>
-					<h2>ic_wc_48px</h2>
+					<h2>wc</h2>
 				</li>
 				<li title="ic_wifi_48px">
 					<div class="icon-box">
-						
+
 						<!-- ic_wifi_48px -->
-						<img src="notification.svg#ic_wifi_48px" class="svg-ic_wifi_48px-dims" alt="ic_wifi_48px"/>
-						
+						<img src="notification.svg#wifi" class="svg-ic_wifi_48px-dims" alt="ic_wifi_48px"/>
+
 					</div>
-					<h2>ic_wifi_48px</h2>
+					<h2>wifi</h2>
 				</li>
 			</ul>
 
