@@ -1,8 +1,8 @@
 # svg-material-icons
-SVG Material Icons for Material Angular
+SVG Material Icons for Material Angular compiled from the official [material-design-icons](https://github.com/google/material-design-icons) repo.
 
 #### Example code
-
+##### app.js
 ```javascript
 var app = angular.module('MyModule', ['ngMaterial']);
 app.config(function($mdIconProvider /*, ... */){
@@ -24,4 +24,11 @@ app.config(function($mdIconProvider /*, ... */){
 		.iconSet("toggle", "assets/libs/svg-material-icons/toggle.svg", 48);
 	// ...
 });
+```
+
+##### index.html
+```html
+<md-button aria-label="Menu" class="md-icon-button" ng-click="$mdOpenMenu()">
+	<md-icon md-menu-origin md-svg-icon="navigation:menu"></md-icon>
+</md-button>
 ```
