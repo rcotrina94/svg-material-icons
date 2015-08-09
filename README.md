@@ -20,7 +20,7 @@ app.config(function($mdIconProvider /*, ... */){
 		.iconSet("maps", "assets/libs/svg-material-icons/maps.svg", 48)
 		.iconSet("navigation", "assets/libs/svg-material-icons/navigation.svg", 48)
 		.iconSet("notification", "assets/libs/svg-material-icons/notification.svg", 48)
-		.iconSet("social", "assets/libs/svg-material-icons/social", 48)
+		.iconSet("social", "assets/libs/svg-material-icons/social.svg", 48)
 		.iconSet("toggle", "assets/libs/svg-material-icons/toggle.svg", 48);
 	// ...
 });
